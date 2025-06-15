@@ -25,7 +25,7 @@ const FormBanner = (props: Props) => {
   };
 
   return (
-    <div className="bg-white rounded-lg w-[350px] md:w-[550px] mx-auto p-10 text-black">
+    <div className="bg-white rounded-lg w-[350px] md:w-[550px] mx-auto p-10 text-black shadow-xl">
       <Column gap={6}>
         <p className="text-black font-medium text-5xl">${value.toLocaleString()}</p>
         
