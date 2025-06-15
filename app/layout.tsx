@@ -8,7 +8,6 @@ import TopLabel from "./components/top-label";
 import Script from "next/script";
 import Head from "next/head";
 import { content } from "./content/text";
-import { GoogleTagManager } from "@next/third-parties/google";
 
 export const metadata: Metadata = {
   title: `${content.domain}`,
@@ -28,7 +27,6 @@ export default function RootLayout({
       <body className="">
         <TopLabel />
         <div>{children}</div>
-        <GoogleTagManager gtmId={`${content.gtm}`} />
         <Footer />
       </body>
     </html>
