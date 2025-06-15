@@ -19,6 +19,182 @@ const Footer = (props: Props) => {
     setActiveModal(null);
   };
 
+  const ContactContent = () => (
+    <div className="prose prose-gray max-w-none space-y-6 text-sm sm:text-base leading-relaxed">
+      <div className="text-center mb-8">
+        <p className="text-gray-600 text-lg">
+          We're here to help! Get in touch with us for any questions or support.
+        </p>
+      </div>
+
+      {/* Contact Information Cards */}
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
+        {/* General Contact */}
+        <div className="bg-gradient-to-br from-blue-50 to-blue-100 rounded-xl p-6 border border-blue-200">
+          <h3 className="text-xl font-semibold text-blue-800 mb-4 flex items-center">
+            <svg className="w-6 h-6 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 4.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+            </svg>
+            General Inquiries
+          </h3>
+          <div className="space-y-2 text-gray-700">
+            <p><strong>Email:</strong> info@{content.domain.toLowerCase()}</p>
+            <p><strong>Phone:</strong> 1-800-SCRATCH (1-800-727-2824)</p>
+            <p><strong>Hours:</strong> Monday - Friday, 9 AM - 6 PM EST</p>
+          </div>
+        </div>
+
+        {/* Support Contact */}
+        <div className="bg-gradient-to-br from-green-50 to-green-100 rounded-xl p-6 border border-green-200">
+          <h3 className="text-xl font-semibold text-green-800 mb-4 flex items-center">
+            <svg className="w-6 h-6 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M18.364 5.636l-3.536 3.536m0 5.656l3.536 3.536M9.172 9.172L5.636 5.636m3.536 9.192L5.636 18.364M12 2.25a9.75 9.75 0 11-9.75 9.75 9.75 9.75 0 019.75-9.75z" />
+            </svg>
+            Customer Support
+          </h3>
+          <div className="space-y-2 text-gray-700">
+            <p><strong>Email:</strong> support@{content.domain.toLowerCase()}</p>
+            <p><strong>Phone:</strong> 1-800-HELP-NOW (1-800-435-7669)</p>
+            <p><strong>Hours:</strong> 24/7 Support Available</p>
+          </div>
+        </div>
+      </div>
+
+      {/* Business Address */}
+      <section className="bg-gray-50 rounded-xl p-6 border border-gray-200">
+        <h3 className="text-xl font-semibold text-gray-800 mb-4 flex items-center">
+          <svg className="w-6 h-6 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
+            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+          </svg>
+          Business Address
+        </h3>
+        <div className="text-gray-700">
+          <p className="font-semibold">{content.domain}</p>
+          <p>{content.address}</p>
+          <p className="mt-2 text-sm text-gray-600">Company Number: {content.company}</p>
+        </div>
+      </section>
+
+      {/* Contact Form */}
+      <section className="bg-white border border-gray-200 rounded-xl p-6">
+        <h3 className="text-xl font-semibold text-gray-800 mb-4 flex items-center">
+          <svg className="w-6 h-6 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z" />
+          </svg>
+          Send us a Message
+        </h3>
+        <form className="space-y-4">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+            <div>
+              <label className="block text-sm font-medium text-gray-700 mb-2">
+                First Name *
+              </label>
+              <input
+                type="text"
+                className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-custom-blue focus:border-transparent transition-all"
+                placeholder="Your first name"
+                required
+              />
+            </div>
+            <div>
+              <label className="block text-sm font-medium text-gray-700 mb-2">
+                Last Name *
+              </label>
+              <input
+                type="text"
+                className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-custom-blue focus:border-transparent transition-all"
+                placeholder="Your last name"
+                required
+              />
+            </div>
+          </div>
+          
+          <div>
+            <label className="block text-sm font-medium text-gray-700 mb-2">
+              Email Address *
+            </label>
+            <input
+              type="email"
+              className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-custom-blue focus:border-transparent transition-all"
+              placeholder="your.email@example.com"
+              required
+            />
+          </div>
+          
+          <div>
+            <label className="block text-sm font-medium text-gray-700 mb-2">
+              Phone Number
+            </label>
+            <input
+              type="tel"
+              className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-custom-blue focus:border-transparent transition-all"
+              placeholder="(555) 123-4567"
+            />
+          </div>
+          
+          <div>
+            <label className="block text-sm font-medium text-gray-700 mb-2">
+              Subject *
+            </label>
+            <select className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-custom-blue focus:border-transparent transition-all" required>
+              <option value="">Select a subject</option>
+              <option value="general">General Inquiry</option>
+              <option value="support">Customer Support</option>
+              <option value="loan">Loan Application Help</option>
+              <option value="technical">Technical Issue</option>
+              <option value="feedback">Feedback</option>
+              <option value="other">Other</option>
+            </select>
+          </div>
+          
+          <div>
+            <label className="block text-sm font-medium text-gray-700 mb-2">
+              Message *
+            </label>
+            <textarea
+              rows={5}
+              className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-custom-blue focus:border-transparent transition-all resize-vertical"
+              placeholder="Please describe your inquiry or message..."
+              required
+            ></textarea>
+          </div>
+          
+          <button
+            type="submit"
+            className="w-full bg-gradient-to-r from-custom-blue to-custom-blue-light hover:from-custom-blue-dark hover:to-custom-blue text-white font-semibold py-4 px-6 rounded-xl transition-all duration-300 transform hover:scale-105 active:scale-95 hover:shadow-lg focus:outline-none focus:ring-4 focus:ring-blue-300"
+          >
+            Send Message
+          </button>
+        </form>
+      </section>
+
+      {/* FAQ Quick Links */}
+      <section className="bg-gradient-to-r from-purple-50 to-pink-50 rounded-xl p-6 border border-purple-200">
+        <h3 className="text-xl font-semibold text-purple-800 mb-4">
+          Need Quick Answers?
+        </h3>
+        <p className="text-gray-700 mb-4">
+          Check out our FAQ section for immediate answers to common questions about loans, applications, and our services.
+        </p>
+        <div className="flex flex-wrap gap-3">
+          <span className="inline-flex items-center px-3 py-1 rounded-full text-sm bg-purple-100 text-purple-800">
+            Loan Requirements
+          </span>
+          <span className="inline-flex items-center px-3 py-1 rounded-full text-sm bg-purple-100 text-purple-800">
+            Application Process
+          </span>
+          <span className="inline-flex items-center px-3 py-1 rounded-full text-sm bg-purple-100 text-purple-800">
+            Approval Times
+          </span>
+          <span className="inline-flex items-center px-3 py-1 rounded-full text-sm bg-purple-100 text-purple-800">
+            Interest Rates
+          </span>
+        </div>
+      </section>
+    </div>
+  );
+
   const PrivacyPolicyContent = () => (
     <div className="prose prose-gray max-w-none space-y-6 text-sm sm:text-base leading-relaxed">
       <p className="text-gray-600 text-center mb-8">
@@ -234,6 +410,12 @@ const Footer = (props: Props) => {
               {/* Legal Links */}
               <div className="flex flex-wrap justify-center gap-4 sm:gap-6 mb-4">
                 <button 
+                  onClick={() => openModal('contact')}
+                  className="hover:text-white transition-colors underline cursor-pointer bg-transparent border-none text-xs sm:text-sm"
+                >
+                  Contact Us
+                </button>
+                <button 
                   onClick={() => openModal('privacy')}
                   className="hover:text-white transition-colors underline cursor-pointer bg-transparent border-none text-xs sm:text-sm"
                 >
@@ -278,6 +460,14 @@ const Footer = (props: Props) => {
       </footer>
 
       {/* Modals */}
+      <Modal
+        isOpen={activeModal === 'contact'}
+        onClose={closeModal}
+        title="Contact Us"
+      >
+        <ContactContent />
+      </Modal>
+
       <Modal
         isOpen={activeModal === 'privacy'}
         onClose={closeModal}
