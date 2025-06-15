@@ -4,6 +4,7 @@ import React, { useEffect, useRef, useState } from "react";
 import Column from "./column";
 import Row from "./row";
 import ButtonGetStart from "./button-get-start";
+import { BsShieldLockFill } from "react-icons/bs";
 
 type Props = {};
 
@@ -80,6 +81,12 @@ const FormBanner = (props: Props) => {
           <div>{`Apply now and get a 
 decision within minutes`}</div>
         </Column>
+
+        {/* Security Message with Icon */}
+        <div className="flex items-center justify-center gap-2 text-xs sm:text-sm text-gray-600 bg-green-50 border border-green-200 rounded-lg p-3">
+          <BsShieldLockFill className="text-green-600 w-4 h-4 flex-shrink-0" />
+          <span className="text-center">We use 256 bit SSL technology to encrypt your data.</span>
+        </div>
       </Column>
 
       <style jsx>{`
