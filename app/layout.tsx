@@ -10,13 +10,14 @@ import Script from "next/script";
 import Head from "next/head";
 import { content } from "./content/text";
 import { GoogleTagManager } from "@next/third-parties/google";
+
 export const metadata: Metadata = {
   title: `${content.domain}`,
   description: "Simple Application Process And Fast Approvals Are Our Advantage. Apply Now To Get Started.",
   icons: {
     icon: "/images/icon.png", // /public path,
   },
-};[]
+};
 
 export default function RootLayout({
   children,
