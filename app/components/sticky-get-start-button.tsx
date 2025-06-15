@@ -44,13 +44,13 @@ const StickyGetStartButton = (props: Props) => {
         `}
       >
         <div className="bg-gradient-to-br from-white to-red-50 rounded-2xl shadow-2xl p-4 sm:p-5 border border-red-100 backdrop-blur-sm relative">
-          {/* Close Button */}
+          {/* Close Button - Made smaller */}
           <button
             onClick={handleClose}
-            className="absolute -top-1 -right-1 w-6 h-6 bg-gradient-to-r from-gray-400 to-gray-500 hover:from-gray-500 hover:to-gray-600 rounded-full flex items-center justify-center transition-all duration-200 hover:scale-110 active:scale-95 touch-manipulation"
+            className="absolute -top-0.5 -right-0.5 w-4 h-4 bg-gradient-to-r from-gray-400 to-gray-500 hover:from-gray-500 hover:to-gray-600 rounded-full flex items-center justify-center transition-all duration-200 hover:scale-110 active:scale-95 touch-manipulation"
             aria-label="Close"
           >
-            <AiOutlineClose className="text-white w-3 h-3" />
+            <AiOutlineClose className="text-white w-2 h-2" />
           </button>
 
           {/* Header with icon */}
@@ -82,9 +82,6 @@ const StickyGetStartButton = (props: Props) => {
               Safe & Secure Application
             </p>
           </div>
-
-          {/* Decorative elements */}
-          <div className="absolute -bottom-1 -left-1 w-4 h-4 bg-gradient-to-r from-green-400 to-red-500 rounded-full opacity-60"></div>
         </div>
       </div>
     </div>
