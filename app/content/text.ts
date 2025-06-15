@@ -2,7 +2,7 @@ export const content = {
   domain: "Scratchpay.com",
   address: "8807 Olga Streets Apt. 357 Warwick, RI 02889",
   company: "89741",
-  colors: "#012466",
+  colors: "#245bdf",
   title1: "Let's Get to The Point.",
   title2: "Medical Financing with Heart.",
   aid: "14881",
