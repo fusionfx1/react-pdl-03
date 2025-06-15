@@ -85,7 +85,7 @@ export default function PrivacyPolicy() {
                 <p className="text-gray-700">
                   <strong>{content.domain}</strong><br />
                   Address: {content.address}<br />
-                  Email: privacy@{content.domain.toLowerCase()}.com
+                  Email: privacy@{content.domain.toLowerCase()}
                 </p>
               </div>
             </section>
