@@ -4,6 +4,7 @@ import "./globals.css";
 import Footer from "./components/footer";
 import localFont from "next/font/local";
 import TopLabel from "./components/top-label";
+import ScrollToTop from "./components/scroll-to-top";
 import Script from "next/script";
 import Head from "next/head";
 import { content } from "./content/text";
@@ -57,6 +58,7 @@ export default function RootLayout({
         <TopLabel />
         <div>{children}</div>
         <Footer />
+        <ScrollToTop />
       </body>
     </html>
   );
