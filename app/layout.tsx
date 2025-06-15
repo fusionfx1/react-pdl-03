@@ -56,7 +56,7 @@ export default function RootLayout({
         {/* End Google Tag Manager (noscript) */}
         
         <TopLabel />
-        <div className="pt-16 sm:pt-20">{children}</div>
+        <div className="pt-8 sm:pt-10">{children}</div>
         <Footer />
         <StickyGetStartButton />
       </body>
