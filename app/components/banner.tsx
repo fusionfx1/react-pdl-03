@@ -14,7 +14,7 @@ const Banner = (props: Props) => {
     <div className="relative min-h-screen bg-gradient-to-br from-blue-900 via-blue-800 to-blue-900 flex items-center">
       {/* Background Pattern */}
       <div className="absolute inset-0 opacity-10">
-        <div className={`absolute inset-0 bg-[url('${backgroundPattern}')]`}></div>
+        <div className={`absolute inset-0 bg-[url("${backgroundPattern}")]`}></div>
       </div>
       
       <div className="my-container relative z-10">
