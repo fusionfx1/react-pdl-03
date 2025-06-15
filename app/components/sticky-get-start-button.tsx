@@ -44,14 +44,14 @@ const StickyGetStartButton = (props: Props) => {
         `}
       >
         <div className="bg-gradient-to-br from-white to-red-50 rounded-2xl shadow-2xl p-3 sm:p-5 border border-red-100 backdrop-blur-sm relative">
-          {/* Close Button - Made much smaller */}
+          {/* Modern Close Button */}
           <button
             onClick={handleClose}
-            className="absolute w-4 h-4 sm:w-5 sm:h-5 bg-gradient-to-r from-gray-400 to-gray-500 hover:from-gray-500 hover:to-gray-600 rounded-full flex items-center justify-center transition-all duration-200 hover:scale-110 active:scale-95 touch-manipulation"
-            style={{ top: '-8px', right: '-8px' }}
+            className="absolute -top-3 -right-3 w-8 h-8 bg-gradient-to-br from-gray-100 to-gray-200 hover:from-red-100 hover:to-red-200 rounded-full flex items-center justify-center transition-all duration-300 hover:scale-110 active:scale-95 touch-manipulation shadow-lg border border-white/50 backdrop-blur-sm group"
             aria-label="Close"
           >
-            <AiOutlineClose className="text-white w-2 h-2 sm:w-2.5 sm:h-2.5" />
+            <AiOutlineClose className="text-gray-600 group-hover:text-red-600 w-4 h-4 transition-colors duration-300" />
+            <div className="absolute inset-0 rounded-full bg-gradient-to-br from-white/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
           </button>
 
           {/* Header with icon */}
