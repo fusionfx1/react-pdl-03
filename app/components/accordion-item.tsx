@@ -17,18 +17,18 @@ const AccordionItem = ({ data, firstActive }: Props) => {
   return (
     <div className="border-b border-gray-200 last:border-b-0">
       <Column
-        className={`cursor-pointer transition-all duration-300 ${
-          open ? "bg-white" : "bg-gray-50 hover:bg-gray-100"
+        className={`cursor-pointer transition-all duration-300 touch-manipulation ${
+          open ? "bg-white" : "bg-gray-50 hover:bg-gray-100 active:bg-gray-200"
         }`}
         onClick={() => setOpen(!open)}
       >
-        <div className="flex justify-between items-center p-6 lg:p-8">
-          <h3 className="text-lg lg:text-xl font-semibold text-gray-800 pr-4">
+        <div className="flex justify-between items-center p-4 sm:p-6 lg:p-8">
+          <h3 className="text-base sm:text-lg lg:text-xl font-semibold text-gray-800 pr-4 leading-tight">
             {data.title}
           </h3>
           <div className="flex-shrink-0">
-            <div className={`w-8 h-8 rounded-full flex items-center justify-center transition-all duration-300 ${
-              open ? "bg-blue-600 text-white rotate-180" : "bg-gray-200 text-gray-600 hover:bg-gray-300"
+            <div className={`w-10 h-10 sm:w-8 sm:h-8 rounded-full flex items-center justify-center transition-all duration-300 touch-manipulation ${
+              open ? "bg-blue-600 text-white rotate-180" : "bg-gray-200 text-gray-600 hover:bg-gray-300 active:bg-gray-400"
             }`}>
               {open ? <AiOutlineMinus size={16} /> : <GoPlus size={16} />}
             </div>
@@ -37,11 +37,11 @@ const AccordionItem = ({ data, firstActive }: Props) => {
         
         <div
           className={`overflow-hidden transition-all duration-300 ${
-            open ? "max-h-[500px] pb-6 lg:pb-8" : "max-h-0"
+            open ? "max-h-[500px] pb-4 sm:pb-6 lg:pb-8" : "max-h-0"
           }`}
         >
           <div 
-            className="px-6 lg:px-8 text-gray-600 leading-relaxed prose prose-gray max-w-none"
+            className="px-4 sm:px-6 lg:px-8 text-gray-600 leading-relaxed prose prose-gray max-w-none text-sm sm:text-base"
             dangerouslySetInnerHTML={{ __html: data.content }}
           />
         </div>

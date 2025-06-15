@@ -68,7 +68,7 @@ const TableLean = (props: Props) => {
         <thead>
           <tr className="bg-gradient-to-r from-blue-600 to-blue-700 text-white">
             {headers.map((header, index) => (
-              <th key={index} className="px-4 py-4 text-left font-semibold text-sm whitespace-nowrap">
+              <th key={index} className="px-2 sm:px-4 py-3 sm:py-4 text-left font-semibold text-xs sm:text-sm whitespace-nowrap">
                 {header}
               </th>
             ))}
@@ -82,15 +82,15 @@ const TableLean = (props: Props) => {
                 index % 2 === 0 ? "bg-gray-50" : "bg-white"
               } hover:bg-blue-50 transition-colors`}
             >
-              <td className="px-4 py-4 font-semibold text-blue-600">{row.amount}</td>
-              <td className="px-4 py-4 text-gray-700">{row.rate}</td>
-              <td className="px-4 py-4 text-gray-700">{row.term}</td>
-              <td className="px-4 py-4 text-gray-700">{row.fee}</td>
-              <td className="px-4 py-4 text-gray-700">{row.feeCost}</td>
-              <td className="px-4 py-4 text-gray-700">{row.repayment}</td>
-              <td className="px-4 py-4 font-semibold text-orange-600">{row.apr}</td>
-              <td className="px-4 py-4 text-gray-700">{row.totalRepayments}</td>
-              <td className="px-4 py-4 font-semibold text-red-600">{row.totalCosts}</td>
+              <td className="px-2 sm:px-4 py-3 sm:py-4 font-semibold text-blue-600 text-xs sm:text-sm">{row.amount}</td>
+              <td className="px-2 sm:px-4 py-3 sm:py-4 text-gray-700 text-xs sm:text-sm">{row.rate}</td>
+              <td className="px-2 sm:px-4 py-3 sm:py-4 text-gray-700 text-xs sm:text-sm">{row.term}</td>
+              <td className="px-2 sm:px-4 py-3 sm:py-4 text-gray-700 text-xs sm:text-sm">{row.fee}</td>
+              <td className="px-2 sm:px-4 py-3 sm:py-4 text-gray-700 text-xs sm:text-sm">{row.feeCost}</td>
+              <td className="px-2 sm:px-4 py-3 sm:py-4 text-gray-700 text-xs sm:text-sm">{row.repayment}</td>
+              <td className="px-2 sm:px-4 py-3 sm:py-4 font-semibold text-orange-600 text-xs sm:text-sm">{row.apr}</td>
+              <td className="px-2 sm:px-4 py-3 sm:py-4 text-gray-700 text-xs sm:text-sm">{row.totalRepayments}</td>
+              <td className="px-2 sm:px-4 py-3 sm:py-4 font-semibold text-red-600 text-xs sm:text-sm">{row.totalCosts}</td>
             </tr>
           ))}
         </tbody>

@@ -7,6 +7,8 @@ body {
   font-family: "Poppins", sans-serif;
   color: #0c2820;
   font-weight: 200;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 .my-container {
@@ -14,6 +16,13 @@ body {
   width: 100%;
   padding: 0 2%;
   margin: 0 auto;
+}
+
+/* Mobile-first responsive container */
+@media (max-width: 640px) {
+  .my-container {
+    padding: 0 4%;
+  }
 }
 
 .rangeContainer {
@@ -32,16 +41,6 @@ body {
 
 .rangeInput::-webkit-slider-thumb {
   -webkit-appearance: none;
-  /* appearance: none;
-  width: 20px;
-  height: 20px;
-  background: red;
-  cursor: pointer;
-  border: 1px solid black;
-  top: -8px;
-  position: relative;
-  background-image: url("https://ibaslogic.github.io/hosted-assets/smile.png"); */
-
   appearance: none;
   height: 40px;
   width: 40px;
@@ -61,4 +60,48 @@ body {
   cursor: pointer;
   border: 1px solid rgb(188, 188, 188);
   background-color: white;
+}
+
+/* Mobile touch optimization */
+@media (max-width: 768px) {
+  .rangeInput::-webkit-slider-thumb {
+    height: 44px;
+    width: 44px;
+    top: -22px;
+  }
+}
+
+/* Touch-friendly interactions */
+.touch-manipulation {
+  touch-action: manipulation;
+}
+
+/* Improve tap targets for mobile */
+@media (max-width: 640px) {
+  button, 
+  [role="button"], 
+  input[type="button"], 
+  input[type="submit"], 
+  input[type="range"] {
+    min-height: 44px;
+    min-width: 44px;
+  }
+}
+
+/* Smooth scrolling for mobile */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Prevent horizontal scroll on mobile */
+body {
+  overflow-x: hidden;
+}
+
+/* Better text rendering on mobile */
+@media (max-width: 640px) {
+  body {
+    text-rendering: optimizeLegibility;
+    -webkit-text-size-adjust: 100%;
+  }
 }

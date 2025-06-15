@@ -25,9 +25,9 @@ const FormBanner = (props: Props) => {
   };
 
   return (
-    <div className="bg-white rounded-lg w-[350px] md:w-[550px] mx-auto p-10 text-black shadow-xl">
+    <div className="bg-white rounded-lg w-full max-w-[350px] sm:max-w-[450px] md:max-w-[550px] mx-auto p-6 sm:p-8 lg:p-10 text-black shadow-xl">
       <Column gap={6}>
-        <p className="text-black font-medium text-5xl">${value.toLocaleString()}</p>
+        <p className="text-black font-medium text-3xl sm:text-4xl lg:text-5xl">${value.toLocaleString()}</p>
         
         {/* Custom Slider */}
         <div className="relative">
@@ -38,16 +38,16 @@ const FormBanner = (props: Props) => {
             step="1"
             value={selectedIndex}
             onChange={handleChange}
-            className="w-full h-2 bg-gray-200 rounded-lg appearance-none cursor-pointer slider"
+            className="w-full h-3 bg-gray-200 rounded-lg appearance-none cursor-pointer slider touch-manipulation"
             style={{
               background: `linear-gradient(to right, #3B82F6 0%, #3B82F6 ${(selectedIndex / 3) * 100}%, #E5E7EB ${(selectedIndex / 3) * 100}%, #E5E7EB 100%)`
             }}
           />
-          <div className="flex justify-between mt-2">
+          <div className="flex justify-between mt-3">
             {priceList.map((amount, index) => (
               <div
                 key={index}
-                className={`w-3 h-3 rounded-full ${
+                className={`w-3 h-3 sm:w-4 sm:h-4 rounded-full ${
                   selectedIndex === index ? 'bg-blue-600' : 'bg-gray-300'
                 } transition-colors`}
               />
@@ -56,27 +56,27 @@ const FormBanner = (props: Props) => {
         </div>
 
         {/* Amount Buttons */}
-        <Row className="justify-between gap-2">
+        <div className="grid grid-cols-2 sm:flex sm:justify-between gap-2 sm:gap-2">
           {priceList.map((item, key) => (
             <button
               key={key}
               onClick={() => handleButtonClick(key)}
-              className={`px-4 py-2 rounded-lg text-sm font-medium transition-all ${
+              className={`px-3 py-3 sm:px-4 sm:py-2 rounded-lg text-sm font-medium transition-all touch-manipulation min-h-[44px] ${
                 selectedIndex === key
                   ? 'bg-blue-600 text-white shadow-md'
-                  : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
+                  : 'bg-gray-100 text-gray-700 hover:bg-gray-200 active:bg-gray-300'
               }`}
             >
               ${item.toLocaleString()}
             </button>
           ))}
-        </Row>
+        </div>
 
         <div>
           <ButtonGetStart />
         </div>
 
-        <Column className="text-md font-normal max-w-[200px] mx-auto">
+        <Column className="text-sm sm:text-base font-normal max-w-[200px] mx-auto text-center">
           <div>{`Apply now and get a 
 decision within minutes`}</div>
         </Column>
@@ -85,22 +85,36 @@ decision within minutes`}</div>
       <style jsx>{`
         .slider::-webkit-slider-thumb {
           appearance: none;
-          height: 20px;
-          width: 20px;
+          height: 24px;
+          width: 24px;
           border-radius: 50%;
           background: #3B82F6;
           cursor: pointer;
           box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+          touch-action: manipulation;
         }
         
         .slider::-moz-range-thumb {
-          height: 20px;
-          width: 20px;
+          height: 24px;
+          width: 24px;
           border-radius: 50%;
           background: #3B82F6;
           cursor: pointer;
           border: none;
           box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+          touch-action: manipulation;
+        }
+
+        @media (max-width: 640px) {
+          .slider::-webkit-slider-thumb {
+            height: 28px;
+            width: 28px;
+          }
+          
+          .slider::-moz-range-thumb {
+            height: 28px;
+            width: 28px;
+          }
         }
       `}</style>
     </div>
