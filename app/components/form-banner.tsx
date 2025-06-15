@@ -77,11 +77,6 @@ const FormBanner = (props: Props) => {
           <ButtonGetStart />
         </div>
 
-        <Column className="text-sm sm:text-base font-normal max-w-[200px] mx-auto text-center">
-          <div>{`Apply now and get a 
-decision within minutes`}</div>
-        </Column>
-
         {/* Security Message with Icon */}
         <div className="flex items-center justify-center gap-2 text-xs sm:text-sm text-gray-600 bg-green-50 border border-green-200 rounded-lg p-3">
           <BsShieldLockFill className="text-green-600 w-4 h-4 flex-shrink-0" />
