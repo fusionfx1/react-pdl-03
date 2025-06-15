@@ -8,46 +8,50 @@ type Props = {};
 const features = [
   {
     image: "/images/cellphone.png",
-    title: "Mobile Friendly",
-    description: "Easy application online and from your mobile on-the-go",
-    color: "from-custom-blue to-custom-blue-light"
+    title: "Mobile Friendly Application",
+    description: "Easy online loan application from your mobile device on-the-go",
+    color: "from-custom-blue to-custom-blue-light",
+    alt: "Mobile phone showing loan application interface"
   },
   {
     image: "/images/forward.png",
-    title: "Fast Funding",
-    description: "Funds transferred quickly to your account when approved",
-    color: "from-green-500 to-green-600"
+    title: "Fast Funding Process",
+    description: "Quick loan funds transferred directly to your account when approved",
+    color: "from-green-500 to-green-600",
+    alt: "Fast forward arrow indicating quick loan processing"
   },
   {
     image: "/images/coins.png",
-    title: "Loan Amounts",
-    description: "Loan amounts offers from $200 to $5,000",
-    color: "from-purple-500 to-purple-600"
+    title: "Flexible Loan Amounts",
+    description: "Personal loan amounts from $200 to $5,000 to meet your needs",
+    color: "from-purple-500 to-purple-600",
+    alt: "Stack of coins representing loan amounts"
   },
   {
     image: "/images/coffee.png",
     title: "Personal Service",
-    description: "Loans suited to your personal needs and circumstances",
-    color: "from-orange-500 to-orange-600"
+    description: "Customized loans suited to your personal financial needs and circumstances",
+    color: "from-orange-500 to-orange-600",
+    alt: "Coffee cup representing personal customer service"
   }
 ];
 
 const How = (props: Props) => {
   return (
-    <section className="py-12 sm:py-16 lg:py-20 bg-gray-50">
+    <section className="py-12 sm:py-16 lg:py-20 bg-gray-50" id="how-it-works">
       <div className="my-container">
-        <div className="text-center mb-12 sm:mb-16 px-4 sm:px-0">
+        <header className="text-center mb-12 sm:mb-16 px-4 sm:px-0">
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-800 mb-4">
-            How can {content.domain} help?
+            How {content.domain} Helps You Get Fast Loans
           </h2>
           <p className="text-lg sm:text-xl text-gray-600 max-w-2xl mx-auto">
-            We make getting a loan simple, fast, and secure with our streamlined process
+            We make getting a personal loan simple, fast, and secure with our streamlined online process
           </p>
-        </div>
+        </header>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8 px-4 sm:px-0">
           {features.map((feature, index) => (
-            <div
+            <article
               key={index}
               className="group bg-white rounded-2xl p-6 sm:p-8 shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 border border-gray-100 touch-manipulation"
             >
@@ -57,10 +61,11 @@ const How = (props: Props) => {
                   <div className="relative bg-white rounded-full p-3 sm:p-4 shadow-lg">
                     <Image
                       src={feature.image}
-                      alt={feature.title}
+                      alt={feature.alt}
                       width={60}
                       height={60}
                       className="w-15 h-15 sm:w-20 sm:h-20 object-contain"
+                      loading="lazy"
                     />
                   </div>
                 </div>
@@ -73,7 +78,7 @@ const How = (props: Props) => {
                   {feature.description}
                 </p>
               </Column>
-            </div>
+            </article>
           ))}
         </div>
       </div>

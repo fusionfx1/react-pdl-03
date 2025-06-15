@@ -9,35 +9,42 @@ type Props = {};
 
 const Banner = (props: Props) => {
   return (
-    <div className="min-h-24 bg-green-dark py-12 sm:py-16 md:py-20 lg:py-24">
+    <section className="min-h-24 bg-green-dark py-12 sm:py-16 md:py-20 lg:py-24" role="banner">
       <div className="my-container">
         <Column className="text-white text-center gap-6 sm:gap-8 lg:gap-10">
-          <Column className="gap-3 sm:gap-4 lg:gap-6">
-            <div className="font-bold text-lg sm:text-xl">{content.domain}</div>
-            <div className="text-3xl sm:text-4xl lg:text-5xl font-medium px-4 sm:px-0">{content.title1}</div>
-            <div className="text-xl sm:text-2xl lg:text-3xl font-normal px-4 sm:px-0">{content.title2}</div>
-          </Column>
-          <div className="w-full flex justify-center">
+          <header>
+            <Column className="gap-3 sm:gap-4 lg:gap-6">
+              <div className="font-bold text-lg sm:text-xl">{content.domain}</div>
+              <h1 className="text-3xl sm:text-4xl lg:text-5xl font-medium px-4 sm:px-0">
+                Fast Online Personal Loans Up to $5,000
+              </h1>
+              <h2 className="text-xl sm:text-2xl lg:text-3xl font-normal px-4 sm:px-0">
+                Instant Approval • Same Day Funding • Bad Credit OK
+              </h2>
+            </Column>
+          </header>
+          
+          <div className="w-full flex justify-center" role="application" aria-label="Loan amount calculator">
             <FormBanner />
           </div>
 
-          <Column className="mx-auto space-y-2 sm:space-y-3">
-            <Row gap={3}>
-              <TiInputChecked size={20} className="sm:w-6 sm:h-6 flex-shrink-0" />
-              <div className="text-sm sm:text-base">Available for all credit types</div>
+          <div className="mx-auto space-y-2 sm:space-y-3" role="list" aria-label="Loan benefits">
+            <Row gap={3} className="justify-center">
+              <TiInputChecked size={20} className="sm:w-6 sm:h-6 flex-shrink-0" aria-hidden="true" />
+              <div className="text-sm sm:text-base">Available for all credit types including bad credit</div>
             </Row>
-            <Row gap={3}>
-              <TiInputChecked size={20} className="sm:w-6 sm:h-6 flex-shrink-0" />
-              <div className="text-sm sm:text-base">Money straight to your bank</div>
+            <Row gap={3} className="justify-center">
+              <TiInputChecked size={20} className="sm:w-6 sm:h-6 flex-shrink-0" aria-hidden="true" />
+              <div className="text-sm sm:text-base">Money deposited straight to your bank account</div>
             </Row>
-            <Row gap={3}>
-              <TiInputChecked size={20} className="sm:w-6 sm:h-6 flex-shrink-0" />
-              <div className="text-sm sm:text-base">Safe, secure and reliable</div>
+            <Row gap={3} className="justify-center">
+              <TiInputChecked size={20} className="sm:w-6 sm:h-6 flex-shrink-0" aria-hidden="true" />
+              <div className="text-sm sm:text-base">Safe, secure and reliable loan process</div>
             </Row>
-          </Column>
+          </div>
         </Column>
       </div>
-    </div>
+    </section>
   );
 };
 
