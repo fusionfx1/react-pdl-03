@@ -1,4 +1,3 @@
-/* eslint-disable @next/next/no-script-component-in-head */
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
@@ -26,25 +25,6 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <Script id="show-banner">
-        {`var _lg_form_init_ = {
-                            aid: "${content.aid}",
-       ref: "${content.ref}",
-                            template: "fresh"
-                        };
-                        if (typeof _lg_form_config_ === 'undefined') {
-                            var _lg_form_config_ = {
-                                offer_index_mode: true,
-                            };
-                        } else {
-                            _lg_form_config_.offer_index_mode = true;
-                        }`}
-      </Script>
-      <Script
-        type="text/javascript"
-        async={true}
-        src="https://loansaccount.com/form/applicationInit.js"
-      ></Script>
       <body className="">
         <TopLabel />
         <div>{children}</div>
