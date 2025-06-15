@@ -1,6 +1,6 @@
 import React from "react";
 import { content } from "../content/text";
-eslint-disable react/no-unescaped-entities
+
 export default function ResponsibleLending() {
   return (
     <div className="min-h-screen bg-gray-50 py-12 sm:py-16 lg:py-20">
@@ -25,7 +25,7 @@ export default function ResponsibleLending() {
               <ul className="list-disc pl-6 text-gray-600 space-y-2">
                 <li>Transparent disclosure of all loan terms and conditions</li>
                 <li>Fair and non-discriminatory lending practices</li>
-                <li>Reasonable assessment of borrower's ability to repay</li>
+                <li>Reasonable assessment of borrower&apos;s ability to repay</li>
                 <li>Compliance with applicable interest rate and fee regulations</li>
                 <li>Clear communication throughout the loan process</li>
               </ul>
@@ -77,9 +77,9 @@ export default function ResponsibleLending() {
             </section>
 
             <section>
-              <h2 className="text-xl sm:text-2xl font-semibold text-gray-800 mb-4">If You're Having Trouble</h2>
+              <h2 className="text-xl sm:text-2xl font-semibold text-gray-800 mb-4">If You&apos;re Having Trouble</h2>
               <p className="text-gray-600 mb-4">
-                If you're experiencing financial difficulties, consider these options:
+                If you&apos;re experiencing financial difficulties, consider these options:
               </p>
               <ul className="list-disc pl-6 text-gray-600 space-y-2">
                 <li>Contact your lender immediately to discuss your situation</li>
