@@ -57,20 +57,35 @@ const FormBanner = (props: Props) => {
         </div>
 
         {/* Amount Buttons */}
-        <div className="grid grid-cols-2 sm:flex sm:justify-between gap-2 sm:gap-2">
-          {priceList.map((item, key) => (
-            <button
-              key={key}
-              onClick={() => handleButtonClick(key)}
-              className={`px-3 py-3 sm:px-4 sm:py-2 rounded-lg text-sm font-medium transition-all touch-manipulation min-h-[44px] ${
-                selectedIndex === key
-                  ? 'bg-custom-blue text-white shadow-md'
-                  : 'bg-gray-100 text-gray-700 hover:bg-gray-200 active:bg-gray-300'
-              }`}
-            >
-              ${item.toLocaleString()}
-            </button>
-          ))}
+        <div className="space-y-2">
+          {/* First row: $200, $500, $1000, $2500 */}
+          <div className="grid grid-cols-2 sm:grid-cols-4 gap-2">
+            {priceList.slice(0, 4).map((item, key) => (
+              <button
+                key={key}
+                onClick={() => handleButtonClick(key)}
+                className={`px-3 py-3 sm:px-4 sm:py-2 rounded-lg text-sm font-medium transition-all touch-manipulation min-h-[44px] ${
+                  selectedIndex === key
+                    ? 'bg-custom-blue text-white shadow-md'
+                    : 'bg-gray-100 text-gray-700 hover:bg-gray-200 active:bg-gray-300'
+                }`}
+              >
+                ${item.toLocaleString()}
+              </button>
+            ))}
+          </div>
+          
+          {/* Second row: $5000 full width */}
+          <button
+            onClick={() => handleButtonClick(4)}
+            className={`w-full px-3 py-3 sm:px-4 sm:py-2 rounded-lg text-sm font-medium transition-all touch-manipulation min-h-[44px] ${
+              selectedIndex === 4
+                ? 'bg-custom-blue text-white shadow-md'
+                : 'bg-gray-100 text-gray-700 hover:bg-gray-200 active:bg-gray-300'
+            }`}
+          >
+            $5,000+
+          </button>
         </div>
 
         <div>
