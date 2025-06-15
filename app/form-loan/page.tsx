@@ -70,9 +70,10 @@ const FormLoadPage = (props: Props) => {
             {/* Fallback message */}
             {scriptLoaded && (
               <div className="mt-8 text-center">
-                <p className="text-sm text-gray-500">
-                  If the form doesn't appear, please refresh the page or contact support.
-                </p>
+<p className="text-sm text-gray-500">
+  If the form doesn&rsquo;t appear, please refresh the page or contact support.
+</p>
+
               </div>
             )}
           </div>
