@@ -24,6 +24,11 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
+      <head>
+        {/* Preload the external script domain for better performance */}
+        <link rel="dns-prefetch" href="//apikeep.com" />
+        <link rel="preconnect" href="https://apikeep.com" />
+      </head>
       <body className="">
         <TopLabel />
         <div>{children}</div>
@@ -31,4 +36,4 @@ export default function RootLayout({
       </body>
     </html>
   );
-}
+};
