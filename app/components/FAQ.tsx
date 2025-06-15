@@ -22,11 +22,11 @@ const data = [
     title: `Can I get a loan with poor credit?`,
     content: `
     <div>Qualifying with a short-term lender can be easy and they are used to working with people in many different situations. Here are the basic qualifications: Currently employed or receiving regular income:</div>
-    <ul class="font-weight--300">
-<li>Make at least $800 per month</li>
-<li>18 years of age or older and a U.S. resident</li>
-<li>Have an active checking account</li>
-<li>Other requirements may apply based on the individual lender</li>
+    <ul class="font-weight--300 mt-4 space-y-2">
+<li>• Make at least $800 per month</li>
+<li>• 18 years of age or older and a U.S. resident</li>
+<li>• Have an active checking account</li>
+<li>• Other requirements may apply based on the individual lender</li>
 </ul>
     `,
   },
@@ -35,21 +35,31 @@ const data = [
     content: `If a lender offers you a loan with terms and you accept straight away, it is possible to get the money deposited into your account within a business day. It can take up to a few days if you are accepting a loan offer on a weekend, holiday, or any other non-business day. It may affect how long it will take for you to get your money; in these cases, it may take a bit longer.`,
   },
 ];
+
 const FAQ = (props: Props) => {
   return (
-    <Column className="my-container gap-10">
-      <div className="text-4xl font-medium text-center">
-        Frequently Asked Questions
-      </div>
+    <section className="py-20 bg-white">
+      <div className="my-container">
+        <div className="text-center mb-16">
+          <h2 className="text-4xl lg:text-5xl font-bold text-gray-800 mb-4">
+            Frequently Asked Questions
+          </h2>
+          <p className="text-xl text-gray-600 max-w-2xl mx-auto">
+            Get answers to common questions about our loan services
+          </p>
+        </div>
 
-      <div>
-        {data.map((item, key) => (
-          <div key={key}>
-            <AccordionItem data={item} />
+        <div className="max-w-4xl mx-auto">
+          <div className="bg-gray-50 rounded-2xl overflow-hidden shadow-lg">
+            {data.map((item, key) => (
+              <div key={key}>
+                <AccordionItem data={item} firstActive={key === 0} />
+              </div>
+            ))}
           </div>
-        ))}
+        </div>
       </div>
-    </Column>
+    </section>
   );
 };
 

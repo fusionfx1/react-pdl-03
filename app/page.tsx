@@ -7,19 +7,14 @@ import FAQ from "./components/FAQ";
 import Column from "./components/column";
 
 export default function Home() {
-  var _lg_form_init_ = {
-    aid: "14881",
-    template: "elvis-us",
-  };
   return (
     <>
-    
-      <Column className="min-h-screen gap-24">
+      <main className="min-h-screen">
         <Banner />
         <How />
         <Lean />
         <FAQ />
-      </Column>
+      </main>
     </>
   );
 }

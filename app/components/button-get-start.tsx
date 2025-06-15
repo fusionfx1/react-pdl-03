@@ -1,4 +1,4 @@
-"use client"; // This is a client component 👈🏽
+"use client";
 
 import { useRouter } from "next/navigation";
 import React from "react";
@@ -7,18 +7,14 @@ type Props = {};
 
 const ButtonGetStart = (props: Props) => {
   const { push } = useRouter();
+  
   return (
-    <div>
-      <a href="/form-loan">
-        <div
-          className="text-white bg-main w-full p-4 rounded-sm  uppercase font-normal"
-          onClick={() => push("/form-loan")}
-        >
-          {" "}
-          get started
-        </div>
-      </a>
-    </div>
+    <button
+      className="w-full bg-gradient-to-r from-blue-600 to-blue-700 hover:from-blue-700 hover:to-blue-800 text-white font-semibold py-4 px-8 rounded-xl transition-all duration-300 transform hover:scale-105 hover:shadow-lg focus:outline-none focus:ring-4 focus:ring-blue-300 uppercase tracking-wide"
+      onClick={() => push("/form-loan")}
+    >
+      Get Started
+    </button>
   );
 };
 

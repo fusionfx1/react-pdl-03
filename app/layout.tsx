@@ -29,7 +29,7 @@ export default function RootLayout({
         {`var _lg_form_init_ = {
                             aid: "${content.aid}",
        ref: "${content.ref}",
-                            template: "elvis-us"
+                            template: "fresh"
                         };
                         if (typeof _lg_form_config_ === 'undefined') {
                             var _lg_form_config_ = {

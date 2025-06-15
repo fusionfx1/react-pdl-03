@@ -3,65 +3,96 @@ import React from "react";
 type Props = {};
 
 const TableLean = (props: Props) => {
+  const tableData = [
+    {
+      amount: "$1,000",
+      rate: "24.00%",
+      term: "12 months",
+      fee: "3.00%",
+      feeCost: "$30.00",
+      repayment: "$94.56",
+      apr: "29.82%",
+      totalRepayments: "$1,134.72",
+      totalCosts: "$164.72"
+    },
+    {
+      amount: "$2,000",
+      rate: "19.00%",
+      term: "24 months",
+      fee: "5.00%",
+      feeCost: "$100.00",
+      repayment: "$100.82",
+      apr: "24.12%",
+      totalRepayments: "$2,419.68",
+      totalCosts: "$519.68"
+    },
+    {
+      amount: "$5,000",
+      rate: "13.00%",
+      term: "48 months",
+      fee: "8.00%",
+      feeCost: "$400.00",
+      repayment: "$131.67",
+      apr: "18.23%",
+      totalRepayments: "$6,320.12",
+      totalCosts: "$1,720.12"
+    },
+    {
+      amount: "$10,000",
+      rate: "7.90%",
+      term: "60 months",
+      fee: "10.00%",
+      feeCost: "$1000.00",
+      repayment: "$202.28",
+      apr: "9.20%",
+      totalRepayments: "$12,136.80",
+      totalCosts: "$3,136.80"
+    }
+  ];
+
+  const headers = [
+    "Loan Amount",
+    "Interest Rate",
+    "Loan Term",
+    "Fee",
+    "Fee Cost",
+    "Repayment",
+    "APR",
+    "Total Repayments",
+    "Total Costs"
+  ];
+
   return (
-    <div className="border max-w-screen overflow-y-scroll w-full lg:overflow-hidden">
-      <table className="w-full">
+    <div className="overflow-x-auto">
+      <table className="w-full min-w-[800px]">
+        <thead>
+          <tr className="bg-gradient-to-r from-blue-600 to-blue-700 text-white">
+            {headers.map((header, index) => (
+              <th key={index} className="px-4 py-4 text-left font-semibold text-sm whitespace-nowrap">
+                {header}
+              </th>
+            ))}
+          </tr>
+        </thead>
         <tbody>
-          <tr className="background--primary color--white font-weight--400">
-            <th className="font-medium p-3 border">Loan Amount</th>
-            <th className="font-medium p-3 border">Interest Rate</th>
-            <th className="font-medium p-3 border">Loan Term</th>
-            <th className="font-medium p-3 border">Fee</th>
-            <th className="font-medium p-3 border">Fee Cost</th>
-            <th className="font-medium p-3 border">Repayment</th>
-            <th className="font-medium p-3 border">APR</th>
-            <th className="font-medium p-3 border">Total Repayments</th>
-            <th className="font-medium p-3 border">Total Costs</th>
-          </tr>
-          <tr className="">
-            <td className="p-3 border text-center">$1,000</td>
-            <td className="p-3 border text-center">24.00%</td>
-            <td className="p-3 border text-center">12 months</td>
-            <td className="p-3 border text-center">3.00%</td>
-            <td className="p-3 border text-center">$30.00</td>
-            <td className="p-3 border text-center">$94.56</td>
-            <td className="p-3 border text-center">29.82%</td>
-            <td className="p-3 border text-center">$1,134.72</td>
-            <td className="p-3 border text-center">$164.72</td>
-          </tr>
-          <tr className="background--white">
-            <td className="p-3 border text-center">$2,000</td>
-            <td className="p-3 border text-center">19.00%</td>
-            <td className="p-3 border text-center">24 months</td>
-            <td className="p-3 border text-center">5.00%</td>
-            <td className="p-3 border text-center">$100.00</td>
-            <td className="p-3 border text-center">$100.82</td>
-            <td className="p-3 border text-center">24.12%</td>
-            <td className="p-3 border text-center">$2,419.68</td>
-            <td className="p-3 border text-center">$519.68</td>
-          </tr>
-          <tr className="background--white">
-            <td className="p-3 border text-center">$5,000</td>
-            <td className="p-3 border text-center">13.00%</td>
-            <td className="p-3 border text-center">48 months</td>
-            <td className="p-3 border text-center">8.00%</td>
-            <td className="p-3 border text-center">$400.00</td>
-            <td className="p-3 border text-center">$131.67</td>
-            <td className="p-3 border text-center">18.23%</td>
-            <td className="p-3 border text-center">$6,320.12</td>
-            <td className="p-3 border text-center">$1,720.12</td>
-          </tr>
-          <tr className="background--white">
-            <td className="p-3 border text-center">$10,000</td>
-            <td className="p-3 border text-center">7.90%</td>
-            <td className="p-3 border text-center">60 months</td>
-            <td className="p-3 border text-center">10.00%</td>
-            <td className="p-3 border text-center">$1000.00</td>
-            <td className="p-3 border text-center">$202.28</td>
-            <td className="p-3 border text-center">9.20%</td>
-            <td className="p-3 border text-center">$12,136.80</td>
-            <td className="p-3 border text-center">$3,136.80</td>
-          </tr>
+          {tableData.map((row, index) => (
+            <tr 
+              key={index} 
+              className={`${
+                index % 2 === 0 ? "bg-gray-50" : "bg-white"
+              } hover:bg-blue-50 transition-colors`}
+            >
+              <td className="px-4 py-4 font-semibold text-blue-600">{row.amount}</td>
+              <td className="px-4 py-4 text-gray-700">{row.rate}</td>
+              <td className="px-4 py-4 text-gray-700">{row.term}</td>
+              <td className="px-4 py-4 text-gray-700">{row.fee}</td>
+              <td className="px-4 py-4 text-gray-700">{row.feeCost}</td>
+              <td className="px-4 py-4 text-gray-700">{row.repayment}</td>
+              <td className="px-4 py-4 font-semibold text-orange-600">{row.apr}</td>
+              <td className="px-4 py-4 text-gray-700">{row.totalRepayments}</td>
+              <td className="px-4 py-4 font-semibold text-red-600">{row.totalCosts}</td>
+            </tr>
+          ))}
         </tbody>
       </table>
     </div>
