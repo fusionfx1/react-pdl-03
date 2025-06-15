@@ -3,7 +3,6 @@ import { Inter } from "next/font/google";
 import "./globals.css";
 import Footer from "./components/footer";
 import localFont from "next/font/local";
-import { useEffect, useState } from "react";
 import TopLabel from "./components/top-label";
 import Script from "next/script";
 import Head from "next/head";
