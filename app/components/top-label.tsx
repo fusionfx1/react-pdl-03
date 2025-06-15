@@ -26,7 +26,7 @@ const TopLabel = (props: Props) => {
     <div className="relative" style={{ zIndex: 10 }}>
       <div className="fixed w-full">
         <div className="bg-[#F3F3FB] border p-2 sm:p-3 text-center text-xs sm:text-sm w-full">
-          Consumer Advisory: APR Rates Range From 5.99% to 35.99% Maximum APR for qualified consumers.
+          APR Ranges From 5.99% up to 35.99% For Qualified Customers.
         </div>
         <div
           className={` ${isScrolled ? "opacity-100" : "opacity-0"
