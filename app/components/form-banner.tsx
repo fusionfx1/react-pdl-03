@@ -29,36 +29,35 @@ const FormBanner = (props: Props) => {
   }, []);
 
   return (
-    //     <div className="bg-white rounded-lg  w-[350px] md:w-[550px] mx-auto p-10 text-black">
-    //       <Column gap={6}>
-    //         <p className=" text-black font-medium text-5xl">${value}</p>
-    //         <input
-    //           type="range"
-    //           min="0"
-    //           max="3000"
-    //           value={value}
-    //           onChange={handleChange}
-    //           className="rangeInput"
-    //           id="input-range"
-    //         />
+    <div className="bg-white rounded-lg  w-[350px] md:w-[550px] mx-auto p-10 text-black">
+      <Column gap={6}>
+        <p className=" text-black font-medium text-5xl">${value}</p>
+        <input
+          type="range"
+          min="0"
+          max="3000"
+          value={value}
+          onChange={handleChange}
+          className="rangeInput"
+          id="input-range"
+        />
 
-    //         <Row className="justify-between">
-    //           {priceList.map((item, key) => (
-    //             <div key={key}>${item}</div>
-    //           ))}
-    //         </Row>
+        <Row className="justify-between">
+          {priceList.map((item, key) => (
+            <div key={key}>${item}</div>
+          ))}
+        </Row>
 
-    //         <div>
-    //           <ButtonGetStart />
-    //         </div>
+        <div>
+          <ButtonGetStart />
+        </div>
 
-    //         <Column className="text-md font-normal max-w-[200px] mx-auto">
-    //           <div>{`Apply now and get a 
-    // decision within minutes`}</div>
-    //         </Column>
-    //       </Column>
-    //     </div>
-    <div className="border rounded-3xl overflow-hidden !max-w-[500px] mx-auto" id="_lg_form_"></div>
+        <Column className="text-md font-normal max-w-[200px] mx-auto">
+          <div>{`Apply now and get a 
+decision within minutes`}</div>
+        </Column>
+      </Column>
+    </div>
   );
 };
 
