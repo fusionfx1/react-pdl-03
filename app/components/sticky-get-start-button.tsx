@@ -40,10 +40,10 @@ const StickyGetStartButton = (props: Props) => {
         className={`
           ${isVisible ? "opacity-100 translate-y-0 scale-100" : "opacity-0 translate-y-4 scale-95 pointer-events-none"}
           transition-all duration-500 transform
-          w-64 sm:w-72
+          w-60 sm:w-72
         `}
       >
-        <div className="bg-gradient-to-br from-white to-red-50 rounded-2xl shadow-2xl p-4 sm:p-5 border border-red-100 backdrop-blur-sm relative">
+        <div className="bg-gradient-to-br from-white to-red-50 rounded-2xl shadow-2xl p-3 sm:p-5 border border-red-100 backdrop-blur-sm relative">
           {/* Close Button - Made smaller */}
           <button
             onClick={handleClose}
@@ -55,30 +55,32 @@ const StickyGetStartButton = (props: Props) => {
           </button>
 
           {/* Header with icon */}
-          <div className="flex items-center justify-center mb-3">
-            <div className="bg-gradient-to-r from-red-600 to-red-700 rounded-full p-2 mr-2">
-              <AiOutlineThunderbolt className="text-white w-4 h-4" />
+          <div className="flex items-center justify-center mb-2 sm:mb-3">
+            <div className="bg-gradient-to-r from-red-600 to-red-700 rounded-full p-1.5 sm:p-2 mr-2">
+              <AiOutlineThunderbolt className="text-white w-3 h-3 sm:w-4 sm:h-4" />
             </div>
-            <h3 className="text-sm sm:text-base font-bold text-gray-800">
+            <h3 className="text-xs sm:text-base font-bold text-gray-800">
               Quick Loan Application
             </h3>
           </div>
 
           {/* Features */}
-          <div className="space-y-2 mb-4">
+          <div className="space-y-1.5 sm:space-y-2 mb-3 sm:mb-4">
             <div className="flex items-center text-xs sm:text-sm text-gray-700">
-              <BiTime className="text-green-600 w-4 h-4 mr-2 flex-shrink-0" />
+              <BiTime className="text-green-600 w-3 h-3 sm:w-4 sm:h-4 mr-2 flex-shrink-0" />
               <span>Decision in minutes</span>
             </div>
             <div className="flex items-center text-xs sm:text-sm text-gray-700">
-              <BiMoney className="text-green-600 w-4 h-4 mr-2 flex-shrink-0" />
+              <BiMoney className="text-green-600 w-3 h-3 sm:w-4 sm:h-4 mr-2 flex-shrink-0" />
               <span>Up to $5,000 available</span>
             </div>
           </div>
 
-          {/* CTA Button */}
-          <div className="space-y-2">
-            <ButtonGetStart />
+          {/* CTA Button - Made smaller */}
+          <div className="space-y-1.5 sm:space-y-2">
+            <div className="transform scale-90 sm:scale-100">
+              <ButtonGetStart />
+            </div>
             <p className="text-center text-xs text-gray-500">
               Safe & Secure Application
             </p>
