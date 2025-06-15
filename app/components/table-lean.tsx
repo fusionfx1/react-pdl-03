@@ -6,56 +6,56 @@ const TableLean = (props: Props) => {
   const tableData = [
     {
       amount: "$500",
-      rate: "28.00%",
-      term: "6 months",
+      rate: "4.95%",
+      term: "65 days",
       fee: "2.00%",
       feeCost: "$10.00",
       repayment: "$95.33",
-      apr: "32.45%",
+      apr: "4.95%",
       totalRepayments: "$571.98",
       totalCosts: "$81.98"
     },
     {
       amount: "$1,000",
-      rate: "24.00%",
+      rate: "9.95%",
       term: "12 months",
       fee: "3.00%",
       feeCost: "$30.00",
       repayment: "$94.56",
-      apr: "29.82%",
+      apr: "9.95%",
       totalRepayments: "$1,134.72",
       totalCosts: "$164.72"
     },
     {
       amount: "$1,500",
-      rate: "21.00%",
+      rate: "15.95%",
       term: "18 months",
       fee: "4.00%",
       feeCost: "$60.00",
       repayment: "$96.78",
-      apr: "26.15%",
+      apr: "15.95%",
       totalRepayments: "$1,742.04",
       totalCosts: "$302.04"
     },
     {
       amount: "$2,500",
-      rate: "19.00%",
+      rate: "25.95%",
       term: "24 months",
       fee: "5.00%",
       feeCost: "$125.00",
       repayment: "$126.03",
-      apr: "24.12%",
+      apr: "25.95%",
       totalRepayments: "$3,024.72",
       totalCosts: "$649.72"
     },
     {
       amount: "$5,000",
-      rate: "13.00%",
-      term: "48 months",
+      rate: "35.95%",
+      term: "84 months",
       fee: "8.00%",
       feeCost: "$400.00",
       repayment: "$131.67",
-      apr: "18.23%",
+      apr: "35.95%",
       totalRepayments: "$6,320.12",
       totalCosts: "$1,720.12"
     }

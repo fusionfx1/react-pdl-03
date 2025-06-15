@@ -22,15 +22,46 @@ const Lean = (props: Props) => {
           {/* APR Disclosure */}
           <div className="bg-white rounded-2xl p-6 sm:p-8 lg:p-10 shadow-lg">
             <h3 className="text-xl sm:text-2xl lg:text-3xl font-bold text-gray-800 mb-4 sm:mb-6">
-              APR Disclosure and Range
+              Annual Percentage Rate (APR)
             </h3>
             <div className="space-y-4 text-gray-600 leading-relaxed text-sm sm:text-base">
               <p>
-                {`${content.domain} is not a lender – as such, we do not have control over the APR you will be offered. We display a Representative APR only as it is based on data offered from multiple lenders. Qualified consumers can get a loan with APR Rates ranging from as low as 5.99% and loans repayment period of 61 to 90 days. Your loan amount, APR and repayment term will vary based on your credit worthiness, state and lender or lending partner. Although some providers offer rates from 5.99% APR rates that low are only available to certain customers. Important Information: Some lenders and services may not be accessible to residents of all States based on lender's preferences and legislation particular to that State.`}
+                Here at {content.domain} we offer APR rates ranging from 4.95% minimum to 35.95% maximum. The APR you may be offered depends on different factors, including your personal situation and financial standing. By completing our loan offer form you shall receive details of the APR and full terms of any loan offered to you.
               </p>
               <p>
-                {`The following table represents sample rates, is for informational purposes only, and may not reflect the actual APRs offered by your lender and/or lending partner. The repayment terms are for close end loan products, and is not reflective of all loan products offered in our network. However, The minimum repayment period for any loan will be 90 days from the date the loan is issued. The maximum repayment period is 3 years`}
+                The actual interest rate you may be offered depends on several factors: your credit score, financial history, income, etc. Contact your lender for more information about the APR you may receive and the terms of your loan agreement.
               </p>
+            </div>
+          </div>
+
+          {/* Loan Term Section */}
+          <div className="bg-white rounded-2xl p-6 sm:p-8 lg:p-10 shadow-lg">
+            <h3 className="text-xl sm:text-2xl lg:text-3xl font-bold text-gray-800 mb-4 sm:mb-6">
+              Loan Term (Repayment Period)
+            </h3>
+            <div className="overflow-hidden rounded-xl border border-gray-200">
+              <table className="w-full">
+                <thead>
+                  <tr className="bg-gradient-to-r from-custom-blue to-custom-blue-light text-white">
+                    <th className="px-4 sm:px-6 py-3 sm:py-4 text-left font-semibold text-sm sm:text-base">
+                      Minimum
+                    </th>
+                    <th className="px-4 sm:px-6 py-3 sm:py-4 text-left font-semibold text-sm sm:text-base">
+                      Maximum
+                    </th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr className="bg-gray-50">
+                    <td className="px-4 sm:px-6 py-3 sm:py-4 text-gray-700 text-sm sm:text-base">
+                      65 days
+                    </td>
+                    <td className="px-4 sm:px-6 py-3 sm:py-4 text-gray-700 text-sm sm:text-base">
+                      84 months
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
             </div>
           </div>
 
@@ -52,7 +83,7 @@ const Lean = (props: Props) => {
             </h3>
             <div className="bg-white rounded-xl p-4 sm:p-6 shadow-sm">
               <p className="text-gray-700 leading-relaxed text-sm sm:text-base">
-                If you borrowed $5,000 over a 48 month period and the loan had a 8% arrangement fee ($400), your monthly repayments would be $131.67, with a total pay back amount of $6320.12 which including the 8% fee paid from the loan amount, would have a total cost of $1720.12. Representative 18.23% APR.
+                If you borrowed $5,000 over a 84 month period and the loan had a 8% arrangement fee ($400), your monthly repayments would be $131.67, with a total pay back amount of $6320.12 which including the 8% fee paid from the loan amount, would have a total cost of $1720.12. Representative 35.95% APR.
               </p>
             </div>
           </div>
