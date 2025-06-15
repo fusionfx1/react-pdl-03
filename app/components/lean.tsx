@@ -70,7 +70,7 @@ const Lean = (props: Props) => {
             <h3 className="text-xl sm:text-2xl lg:text-3xl font-bold text-gray-800 mb-4 sm:mb-6">
               Examples of Costs & APR
             </h3>
-            <p className="text-gray-600 mb-6 text-sm sm:text-base">Sample rates for reference</p>
+            <p className="text-gray-600 mb-6 text-sm sm:text-base">Representative Example</p>
             <div className="overflow-hidden rounded-xl border border-gray-200">
               <TableLean />
             </div>
