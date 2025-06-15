@@ -10,7 +10,7 @@ const features = [
     image: "/images/cellphone.png",
     title: "Mobile Friendly",
     description: "Easy application online and from your mobile on-the-go",
-    color: "from-blue-500 to-blue-600"
+    color: "from-custom-blue to-custom-blue-light"
   },
   {
     image: "/images/forward.png",
@@ -65,7 +65,7 @@ const How = (props: Props) => {
                   </div>
                 </div>
                 
-                <h3 className="text-xl sm:text-2xl font-bold text-gray-800 group-hover:text-blue-600 transition-colors">
+                <h3 className="text-xl sm:text-2xl font-bold text-gray-800 group-hover:text-custom-blue transition-colors">
                   {feature.title}
                 </h3>
                 

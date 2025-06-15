@@ -40,7 +40,7 @@ const FormBanner = (props: Props) => {
             onChange={handleChange}
             className="w-full h-3 bg-gray-200 rounded-lg appearance-none cursor-pointer slider touch-manipulation"
             style={{
-              background: `linear-gradient(to right, #DC2626 0%, #DC2626 ${(selectedIndex / 3) * 100}%, #E5E7EB ${(selectedIndex / 3) * 100}%, #E5E7EB 100%)`
+              background: `linear-gradient(to right, #003566 0%, #003566 ${(selectedIndex / 3) * 100}%, #E5E7EB ${(selectedIndex / 3) * 100}%, #E5E7EB 100%)`
             }}
           />
           <div className="flex justify-between mt-3">
@@ -48,7 +48,7 @@ const FormBanner = (props: Props) => {
               <div
                 key={index}
                 className={`w-3 h-3 sm:w-4 sm:h-4 rounded-full ${
-                  selectedIndex === index ? 'bg-red-600' : 'bg-gray-300'
+                  selectedIndex === index ? 'bg-custom-blue' : 'bg-gray-300'
                 } transition-colors`}
               />
             ))}
@@ -63,7 +63,7 @@ const FormBanner = (props: Props) => {
               onClick={() => handleButtonClick(key)}
               className={`px-3 py-3 sm:px-4 sm:py-2 rounded-lg text-sm font-medium transition-all touch-manipulation min-h-[44px] ${
                 selectedIndex === key
-                  ? 'bg-red-600 text-white shadow-md'
+                  ? 'bg-custom-blue text-white shadow-md'
                   : 'bg-gray-100 text-gray-700 hover:bg-gray-200 active:bg-gray-300'
               }`}
             >
@@ -88,7 +88,7 @@ decision within minutes`}</div>
           height: 24px;
           width: 24px;
           border-radius: 50%;
-          background: #DC2626;
+          background: #003566;
           cursor: pointer;
           box-shadow: 0 2px 4px rgba(0,0,0,0.2);
           touch-action: manipulation;
@@ -98,7 +98,7 @@ decision within minutes`}</div>
           height: 24px;
           width: 24px;
           border-radius: 50%;
-          background: #DC2626;
+          background: #003566;
           cursor: pointer;
           border: none;
           box-shadow: 0 2px 4px rgba(0,0,0,0.2);
