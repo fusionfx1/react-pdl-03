@@ -1,3 +1,4 @@
+/* eslint-disable react/no-unescaped-entities */
 import React from &quot;react&quot;;
 import { content } from &quot;../content/text&quot;;
 
