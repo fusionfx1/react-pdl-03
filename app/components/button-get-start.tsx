@@ -11,6 +11,16 @@ const ButtonGetStart = ({ onScriptLoad }: Props) => {
   const { push } = useRouter();
   
   const handleClick = () => {
+    // Google Ads Conversion Tracking
+    if (typeof window !== 'undefined' && (window as any).dataLayer) {
+      (window as any).dataLayer.push({
+        'event': 'loan_application_start',
+        'event_category': 'engagement',
+        'event_label': 'get_started_button',
+        'value': 1
+      });
+    }
+
     // Load the external script
     if (typeof window !== 'undefined') {
       // Set the form configuration
