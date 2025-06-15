@@ -8,11 +8,11 @@ import { BsShieldLockFill } from "react-icons/bs";
 
 type Props = {};
 
-const priceList = [500, 1000, 2500, 5000];
+const priceList = [200, 500, 1000, 2500, 5000];
 
 const FormBanner = (props: Props) => {
-  const [selectedIndex, setSelectedIndex] = useState(1); // เริ่มต้นที่ $1000
-  const [value, setValue] = useState(priceList[1]); // $1000
+  const [selectedIndex, setSelectedIndex] = useState(2); // เริ่มต้นที่ $1000
+  const [value, setValue] = useState(priceList[2]); // $1000
 
   const handleChange = (e: any) => {
     const sliderValue = parseInt(e.target.value);
@@ -35,13 +35,13 @@ const FormBanner = (props: Props) => {
           <input
             type="range"
             min="0"
-            max="3"
+            max="4"
             step="1"
             value={selectedIndex}
             onChange={handleChange}
             className="w-full h-3 bg-gray-200 rounded-lg appearance-none cursor-pointer slider touch-manipulation"
             style={{
-              background: `linear-gradient(to right, #003566 0%, #003566 ${(selectedIndex / 3) * 100}%, #E5E7EB ${(selectedIndex / 3) * 100}%, #E5E7EB 100%)`
+              background: `linear-gradient(to right, #003566 0%, #003566 ${(selectedIndex / 4) * 100}%, #E5E7EB ${(selectedIndex / 4) * 100}%, #E5E7EB 100%)`
             }}
           />
           <div className="flex justify-between mt-3">
