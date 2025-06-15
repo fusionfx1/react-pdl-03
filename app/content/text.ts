@@ -6,6 +6,6 @@ export const content = {
   title1: "Let's Get to The Point.",
   title2: "We offer fast, easy loans.",
   aid: "14881",
-  gtm: "GTM-XXXXX",
+  gtm: "GTM-XXXXXXX", // แทนที่ด้วย GTM ID จริงของคุณ
   ref: "bigbuckloans",
 };
