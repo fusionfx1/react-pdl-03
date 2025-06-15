@@ -8,8 +8,6 @@ const TableLean = (props: Props) => {
       amount: "$500",
       rate: "4.95%",
       term: "65 days",
-      fee: "2.00%",
-      feeCost: "$10.00",
       repayment: "$95.33",
       apr: "4.95%",
       totalRepayments: "$571.98",
@@ -19,8 +17,6 @@ const TableLean = (props: Props) => {
       amount: "$1,000",
       rate: "9.95%",
       term: "12 months",
-      fee: "3.00%",
-      feeCost: "$30.00",
       repayment: "$94.56",
       apr: "9.95%",
       totalRepayments: "$1,134.72",
@@ -30,8 +26,6 @@ const TableLean = (props: Props) => {
       amount: "$1,500",
       rate: "15.95%",
       term: "18 months",
-      fee: "4.00%",
-      feeCost: "$60.00",
       repayment: "$96.78",
       apr: "15.95%",
       totalRepayments: "$1,742.04",
@@ -41,8 +35,6 @@ const TableLean = (props: Props) => {
       amount: "$2,500",
       rate: "25.95%",
       term: "24 months",
-      fee: "5.00%",
-      feeCost: "$125.00",
       repayment: "$126.03",
       apr: "25.95%",
       totalRepayments: "$3,024.72",
@@ -52,8 +44,6 @@ const TableLean = (props: Props) => {
       amount: "$5,000",
       rate: "35.95%",
       term: "84 months",
-      fee: "8.00%",
-      feeCost: "$400.00",
       repayment: "$131.67",
       apr: "35.95%",
       totalRepayments: "$6,320.12",
@@ -65,8 +55,6 @@ const TableLean = (props: Props) => {
     "Loan Amount",
     "Interest Rate",
     "Loan Term",
-    "Fee",
-    "Fee Cost",
     "Repayment",
     "APR",
     "Total Repayments",
@@ -75,7 +63,7 @@ const TableLean = (props: Props) => {
 
   return (
     <div className="overflow-x-auto">
-      <table className="w-full min-w-[800px]">
+      <table className="w-full min-w-[700px]">
         <thead>
           <tr className="bg-gradient-to-r from-custom-blue to-custom-blue-light text-white">
             {headers.map((header, index) => (
@@ -96,8 +84,6 @@ const TableLean = (props: Props) => {
               <td className="px-2 sm:px-4 py-3 sm:py-4 font-semibold text-custom-blue text-xs sm:text-sm">{row.amount}</td>
               <td className="px-2 sm:px-4 py-3 sm:py-4 text-gray-700 text-xs sm:text-sm">{row.rate}</td>
               <td className="px-2 sm:px-4 py-3 sm:py-4 text-gray-700 text-xs sm:text-sm">{row.term}</td>
-              <td className="px-2 sm:px-4 py-3 sm:py-4 text-gray-700 text-xs sm:text-sm">{row.fee}</td>
-              <td className="px-2 sm:px-4 py-3 sm:py-4 text-gray-700 text-xs sm:text-sm">{row.feeCost}</td>
               <td className="px-2 sm:px-4 py-3 sm:py-4 text-gray-700 text-xs sm:text-sm">{row.repayment}</td>
               <td className="px-2 sm:px-4 py-3 sm:py-4 font-semibold text-orange-600 text-xs sm:text-sm">{row.apr}</td>
               <td className="px-2 sm:px-4 py-3 sm:py-4 text-gray-700 text-xs sm:text-sm">{row.totalRepayments}</td>
