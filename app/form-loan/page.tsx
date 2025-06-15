@@ -71,9 +71,8 @@ const FormLoadPage = (props: Props) => {
             {scriptLoaded && (
               <div className="mt-8 text-center">
 <p className="text-sm text-gray-500">
-  If the form doesn&rsquo;t appear, please refresh the page or contact support.
+  If the form errors please refresh the page or contact support.
 </p>
-
               </div>
             )}
           </div>
