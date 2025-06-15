@@ -35,10 +35,10 @@ const StickyGetStartButton = (props: Props) => {
           w-64 sm:w-72
         `}
       >
-        <div className="bg-gradient-to-br from-white to-blue-50 rounded-2xl shadow-2xl p-4 sm:p-5 border border-blue-100 backdrop-blur-sm">
+        <div className="bg-gradient-to-br from-white to-red-50 rounded-2xl shadow-2xl p-4 sm:p-5 border border-red-100 backdrop-blur-sm">
           {/* Header with icon */}
           <div className="flex items-center justify-center mb-3">
-            <div className="bg-gradient-to-r from-blue-600 to-blue-700 rounded-full p-2 mr-2">
+            <div className="bg-gradient-to-r from-red-600 to-red-700 rounded-full p-2 mr-2">
               <AiOutlineThunderbolt className="text-white w-4 h-4" />
             </div>
             <h3 className="text-sm sm:text-base font-bold text-gray-800">
@@ -68,7 +68,7 @@ const StickyGetStartButton = (props: Props) => {
 
           {/* Decorative elements */}
           <div className="absolute -top-1 -right-1 w-6 h-6 bg-gradient-to-r from-yellow-400 to-orange-500 rounded-full opacity-80 animate-pulse"></div>
-          <div className="absolute -bottom-1 -left-1 w-4 h-4 bg-gradient-to-r from-green-400 to-blue-500 rounded-full opacity-60"></div>
+          <div className="absolute -bottom-1 -left-1 w-4 h-4 bg-gradient-to-r from-green-400 to-red-500 rounded-full opacity-60"></div>
         </div>
       </div>
     </div>

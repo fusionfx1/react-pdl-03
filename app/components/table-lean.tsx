@@ -77,7 +77,7 @@ const TableLean = (props: Props) => {
     <div className="overflow-x-auto">
       <table className="w-full min-w-[800px]">
         <thead>
-          <tr className="bg-gradient-to-r from-blue-600 to-blue-700 text-white">
+          <tr className="bg-gradient-to-r from-red-600 to-red-700 text-white">
             {headers.map((header, index) => (
               <th key={index} className="px-2 sm:px-4 py-3 sm:py-4 text-left font-semibold text-xs sm:text-sm whitespace-nowrap">
                 {header}
@@ -91,9 +91,9 @@ const TableLean = (props: Props) => {
               key={index} 
               className={`${
                 index % 2 === 0 ? "bg-gray-50" : "bg-white"
-              } hover:bg-blue-50 transition-colors`}
+              } hover:bg-red-50 transition-colors`}
             >
-              <td className="px-2 sm:px-4 py-3 sm:py-4 font-semibold text-blue-600 text-xs sm:text-sm">{row.amount}</td>
+              <td className="px-2 sm:px-4 py-3 sm:py-4 font-semibold text-red-600 text-xs sm:text-sm">{row.amount}</td>
               <td className="px-2 sm:px-4 py-3 sm:py-4 text-gray-700 text-xs sm:text-sm">{row.rate}</td>
               <td className="px-2 sm:px-4 py-3 sm:py-4 text-gray-700 text-xs sm:text-sm">{row.term}</td>
               <td className="px-2 sm:px-4 py-3 sm:py-4 text-gray-700 text-xs sm:text-sm">{row.fee}</td>

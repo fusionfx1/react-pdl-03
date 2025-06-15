@@ -28,7 +28,7 @@ const AccordionItem = ({ data, firstActive }: Props) => {
           </h3>
           <div className="flex-shrink-0">
             <div className={`w-10 h-10 sm:w-8 sm:h-8 rounded-full flex items-center justify-center transition-all duration-300 touch-manipulation ${
-              open ? "bg-blue-600 text-white rotate-180" : "bg-gray-200 text-gray-600 hover:bg-gray-300 active:bg-gray-400"
+              open ? "bg-red-600 text-white rotate-180" : "bg-gray-200 text-gray-600 hover:bg-gray-300 active:bg-gray-400"
             }`}>
               {open ? <AiOutlineMinus size={16} /> : <GoPlus size={16} />}
             </div>
