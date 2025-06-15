@@ -102,7 +102,7 @@ export default function TermsOfService() {
                 <p className="text-gray-700">
                   <strong>{content.domain}</strong><br />
                   Address: {content.address}<br />
-                  Email: support@{content.domain.toLowerCase()}.com
+                  Email: support@{content.domain.toLowerCase()}
                 </p>
               </div>
             </section>
