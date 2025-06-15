@@ -5,6 +5,7 @@ import Footer from "./components/footer";
 import localFont from "next/font/local";
 import TopLabel from "./components/top-label";
 import ScrollToTop from "./components/scroll-to-top";
+import StickyGetStartButton from "./components/sticky-get-start-button";
 import Script from "next/script";
 import Head from "next/head";
 import { content } from "./content/text";
@@ -59,6 +60,7 @@ export default function RootLayout({
         <div>{children}</div>
         <Footer />
         <ScrollToTop />
+        <StickyGetStartButton />
       </body>
     </html>
   );
