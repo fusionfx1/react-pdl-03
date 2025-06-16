@@ -27,7 +27,7 @@ const Banner = (props: Props) => {
           <span className="text-yellow-300 font-bold text-shadow-lg drop-shadow-lg animate-pulse">
             {city}, {state}
           </span>{" "}
-          Today • Same Day Funding • Bad Credit OK
+          Today.
         </>
       );
     } else if (city) {
@@ -37,7 +37,7 @@ const Banner = (props: Props) => {
           <span className="text-yellow-300 font-bold text-shadow-lg drop-shadow-lg animate-pulse">
             {city}
           </span>{" "}
-          Today • Same Day Funding • Bad Credit OK
+          Today.
         </>
       );
     } else if (offer) {
