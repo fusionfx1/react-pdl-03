@@ -43,6 +43,32 @@ body {
   --tw-gradient-to: #0466c8;
 }
 
+/* Text shadow utility for city names */
+.text-shadow-lg {
+  text-shadow: 0 4px 8px rgba(0, 0, 0, 0.3), 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+/* Enhanced drop shadow for better visibility */
+.drop-shadow-lg {
+  filter: drop-shadow(0 4px 6px rgba(0, 0, 0, 0.3)) drop-shadow(0 2px 4px rgba(0, 0, 0, 0.2));
+}
+
+/* Custom pulse animation for city names */
+@keyframes city-pulse {
+  0%, 100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.9;
+    transform: scale(1.02);
+  }
+}
+
+.animate-city-pulse {
+  animation: city-pulse 2s ease-in-out infinite;
+}
+
 /* Mobile-first responsive container */
 @media (max-width: 640px) {
   .my-container {

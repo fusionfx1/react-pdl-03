@@ -21,9 +21,25 @@ const Banner = (props: Props) => {
   // Create dynamic subtitle based on URL parameters
   const getSubtitle = () => {
     if (city && state) {
-      return `Special Offer for ${city}, ${state} Today • Same Day Funding • Bad Credit OK`;
+      return (
+        <>
+          Special Offer for{" "}
+          <span className="text-yellow-300 font-bold text-shadow-lg drop-shadow-lg animate-pulse">
+            {city}, {state}
+          </span>{" "}
+          Today • Same Day Funding • Bad Credit OK
+        </>
+      );
     } else if (city) {
-      return `Special Offer for ${city} Today • Same Day Funding • Bad Credit OK`;
+      return (
+        <>
+          Special Offer for{" "}
+          <span className="text-yellow-300 font-bold text-shadow-lg drop-shadow-lg animate-pulse">
+            {city}
+          </span>{" "}
+          Today • Same Day Funding • Bad Credit OK
+        </>
+      );
     } else if (offer) {
       return `${offer} • Same Day Funding • Bad Credit OK`;
     } else {
