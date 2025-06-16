@@ -1,12 +1,34 @@
 import Head from "next/head";
 import Image from "next/image";
-import Banner from "./components/banner";
+import dynamic from "next/dynamic";
 import How from "./components/how";
 import Lean from "./components/lean";
 import FAQ from "./components/FAQ";
 import Column from "./components/column";
 import { content } from "./content/text";
 import type { Metadata } from "next";
+import { Suspense } from "react";
+
+// Dynamically import Banner component with no SSR to avoid useSearchParams issues
+const Banner = dynamic(() => import("./components/banner"), {
+  ssr: false,
+  loading: () => (
+    <div className="min-h-24 bg-green-dark py-12 sm:py-16 md:py-20 lg:py-24 animate-pulse">
+      <div className="my-container">
+        <div className="text-white text-center gap-6 sm:gap-8 lg:gap-10 space-y-6">
+          <div className="space-y-3 sm:space-y-4 lg:space-y-6">
+            <div className="font-bold text-lg sm:text-xl">{content.domain}</div>
+            <div className="h-12 bg-white/20 rounded mx-auto max-w-2xl"></div>
+            <div className="h-8 bg-white/20 rounded mx-auto max-w-xl"></div>
+          </div>
+          <div className="w-full flex justify-center">
+            <div className="bg-white/20 rounded-lg w-full max-w-[350px] sm:max-w-[450px] md:max-w-[550px] mx-auto h-96"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  )
+});
 
 export const metadata: Metadata = {
   title: `${content.domain} - Fast Online Loans | Instant Approval | Up to $5,000`,
@@ -92,7 +114,24 @@ export default function Home() {
       
       <main>
         <Column className="min-h-screen gap-24">
-          <Banner />
+          <Suspense fallback={
+            <div className="min-h-24 bg-green-dark py-12 sm:py-16 md:py-20 lg:py-24 animate-pulse">
+              <div className="my-container">
+                <div className="text-white text-center gap-6 sm:gap-8 lg:gap-10 space-y-6">
+                  <div className="space-y-3 sm:space-y-4 lg:space-y-6">
+                    <div className="font-bold text-lg sm:text-xl">{content.domain}</div>
+                    <div className="h-12 bg-white/20 rounded mx-auto max-w-2xl"></div>
+                    <div className="h-8 bg-white/20 rounded mx-auto max-w-xl"></div>
+                  </div>
+                  <div className="w-full flex justify-center">
+                    <div className="bg-white/20 rounded-lg w-full max-w-[350px] sm:max-w-[450px] md:max-w-[550px] mx-auto h-96"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          }>
+            <Banner />
+          </Suspense>
           <How />
           <Lean />
           <FAQ />

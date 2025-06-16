@@ -18,7 +18,7 @@ const nextConfig = {
   },
   // Performance optimizations
   experimental: {
-    optimizeCss: true,
+    // Removed optimizeCss: true to fix critters module issue
     optimizePackageImports: ['react-icons'],
   },
   // Compress output
