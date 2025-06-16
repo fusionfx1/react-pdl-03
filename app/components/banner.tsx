@@ -70,15 +70,15 @@ const Banner = (props: Props) => {
           <div className="mx-auto space-y-2 sm:space-y-3" role="list" aria-label="Loan benefits">
             <Row gap={3} className="justify-center">
               <TiInputChecked size={20} className="sm:w-6 sm:h-6 flex-shrink-0" aria-hidden="true" />
-              <div className="text-sm sm:text-base">Available for all credit types including bad credit</div>
+              <div className="text-sm sm:text-base"> Available for all credit types</div>
             </Row>
             <Row gap={3} className="justify-center">
               <TiInputChecked size={20} className="sm:w-6 sm:h-6 flex-shrink-0" aria-hidden="true" />
-              <div className="text-sm sm:text-base">Money deposited straight to your bank account</div>
+              <div className="text-sm sm:text-base"> Money straight to your bank</div>
             </Row>
             <Row gap={3} className="justify-center">
               <TiInputChecked size={20} className="sm:w-6 sm:h-6 flex-shrink-0" aria-hidden="true" />
-              <div className="text-sm sm:text-base">Safe, secure and reliable loan process</div>
+              <div className="text-sm sm:text-base"> Safe, secure and reliable</div>
             </Row>
           </div>
         </Column>
