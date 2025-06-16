@@ -1,13 +1,36 @@
+"use client";
+
 import React from "react";
 import Column from "./column";
 import { TiInputChecked } from "react-icons/ti";
 import Row from "./row";
 import FormBanner from "./form-banner";
 import { content } from "../content/text";
+import { useSearchParams } from "next/navigation";
 
 type Props = {};
 
 const Banner = (props: Props) => {
+  const searchParams = useSearchParams();
+  
+  // Get URL parameters
+  const city = searchParams.get('city');
+  const state = searchParams.get('state');
+  const offer = searchParams.get('offer');
+  
+  // Create dynamic subtitle based on URL parameters
+  const getSubtitle = () => {
+    if (city && state) {
+      return `Special Offer for ${city}, ${state} Today • Same Day Funding • Bad Credit OK`;
+    } else if (city) {
+      return `Special Offer for ${city} Today • Same Day Funding • Bad Credit OK`;
+    } else if (offer) {
+      return `${offer} • Same Day Funding • Bad Credit OK`;
+    } else {
+      return "Instant Approval • Same Day Funding • Bad Credit OK";
+    }
+  };
+
   return (
     <section className="min-h-24 bg-green-dark py-12 sm:py-16 md:py-20 lg:py-24" role="banner">
       <div className="my-container">
@@ -19,7 +42,7 @@ const Banner = (props: Props) => {
                 Fast Online Loans Up to $5,000
               </h1>
               <h2 className="text-xl sm:text-2xl lg:text-3xl font-normal px-4 sm:px-0">
-                Instant Approval • Same Day Funding • Bad Credit OK
+                {getSubtitle()}
               </h2>
             </Column>
           </header>
