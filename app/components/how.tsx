@@ -11,28 +11,32 @@ const features = [
     title: "Mobile Friendly Application",
     description: "Easy online loan application from your mobile device on-the-go",
     color: "from-custom-blue to-custom-blue-light",
-    alt: "Mobile phone showing loan application interface"
+    alt: "Mobile phone showing loan application interface",
+    priority: true // Mark first image as priority
   },
   {
     image: "/images/forward.png",
     title: "Fast Funding Process",
     description: "Quick loan funds transferred directly to your account when approved",
     color: "from-green-500 to-green-600",
-    alt: "Fast forward arrow indicating quick loan processing"
+    alt: "Fast forward arrow indicating quick loan processing",
+    priority: false
   },
   {
     image: "/images/coins.png",
     title: "Flexible Loan Amounts",
     description: "Personal loan amounts from $200 to $5,000 to meet your needs",
     color: "from-purple-500 to-purple-600",
-    alt: "Stack of coins representing loan amounts"
+    alt: "Stack of coins representing loan amounts",
+    priority: false
   },
   {
     image: "/images/coffee.png",
     title: "Personal Service",
     description: "Customized loans suited to your personal financial needs and circumstances",
     color: "from-orange-500 to-orange-600",
-    alt: "Coffee cup representing personal customer service"
+    alt: "Coffee cup representing personal customer service",
+    priority: false
   }
 ];
 
@@ -58,14 +62,16 @@ const How = (props: Props) => {
               <Column className="items-center text-center space-y-4 sm:space-y-6">
                 <div className="relative">
                   <div className={`absolute inset-0 bg-gradient-to-r ${feature.color} rounded-full blur-xl opacity-20 group-hover:opacity-30 transition-opacity`}></div>
-                  <div className="relative bg-white rounded-full p-3 sm:p-4 shadow-lg">
+                  <div className="relative bg-white rounded-full p-3 sm:p-4 shadow-lg aspect-ratio-1-1 flex items-center justify-center">
                     <Image
                       src={feature.image}
                       alt={feature.alt}
                       width={60}
                       height={60}
                       className="w-15 h-15 sm:w-20 sm:h-20 object-contain"
-                      loading="lazy"
+                      loading={feature.priority ? "eager" : "lazy"}
+                      priority={feature.priority}
+                      sizes="(max-width: 640px) 60px, 80px"
                     />
                   </div>
                 </div>

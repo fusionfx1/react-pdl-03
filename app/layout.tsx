@@ -9,6 +9,14 @@ import Script from "next/script";
 import Head from "next/head";
 import { content } from "./content/text";
 
+// Optimize font loading with display swap and preload
+const inter = Inter({ 
+  subsets: ["latin"],
+  display: 'swap',
+  preload: true,
+  variable: '--font-inter'
+});
+
 export const metadata: Metadata = {
   title: `${content.domain} - Fast Online Loans | Quick Cash Advance | Personal Loans Up to $5,000`,
   description: "Get approved for personal loans up to $5,000 with ScratchPay.com. Fast online application, instant decisions, and same-day funding. Bad credit OK. Apply now for emergency cash loans.",
@@ -137,12 +145,28 @@ export default function RootLayout({
   };
 
   return (
-    <html lang="en">
+    <html lang="en" className={inter.variable}>
       <head>
         {/* Enhanced Meta Tags */}
         <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5" />
         <meta name="format-detection" content="telephone=no" />
         <meta httpEquiv="x-ua-compatible" content="ie=edge" />
+        
+        {/* Critical Resource Hints - Moved to top for better performance */}
+        <link rel="dns-prefetch" href="//fonts.googleapis.com" />
+        <link rel="dns-prefetch" href="//apikeep.com" />
+        <link rel="preconnect" href="https://fonts.googleapis.com" crossOrigin="" />
+        <link rel="preconnect" href="https://apikeep.com" crossOrigin="" />
+        
+        {/* Preload Critical Resources */}
+        <link rel="preload" href="/images/icon.png" as="image" type="image/png" />
+        <link rel="preload" href="/images/cellphone.png" as="image" type="image/png" />
+        <link rel="preload" href="/images/forward.png" as="image" type="image/png" />
+        <link rel="preload" href="/images/coins.png" as="image" type="image/png" />
+        <link rel="preload" href="/images/coffee.png" as="image" type="image/png" />
+        
+        {/* Preload Critical CSS */}
+        <link rel="preload" href="/globals.css" as="style" />
         
         {/* Geo Tags */}
         <meta name="geo.region" content="US" />
@@ -154,39 +178,16 @@ export default function RootLayout({
         <meta name="distribution" content="global" />
         <meta name="revisit-after" content="1 days" />
         
-        {/* Structured Data */}
+        {/* Structured Data - Optimized */}
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
             __html: JSON.stringify(structuredData),
           }}
         />
-        
-        {/* Google Tag Manager */}
-        <script
-          dangerouslySetInnerHTML={{
-            __html: `
-              (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-              new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-              j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-              'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-              })(window,document,'script','dataLayer','${content.gtm}');
-            `,
-          }}
-        />
-        
-        {/* Preload Critical Resources */}
-        <link rel="dns-prefetch" href="//apikeep.com" />
-        <link rel="preconnect" href="https://apikeep.com" />
-        <link rel="dns-prefetch" href="//fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.googleapis.com" crossOrigin="" />
-        
-        {/* Preload Critical Images */}
-        <link rel="preload" as="image" href="/images/icon.png" />
-        <link rel="preload" as="image" href="/images/cellphone.png" />
       </head>
-      <body className="">
-        {/* Google Tag Manager (noscript) */}
+      <body className="font-sans">
+        {/* Google Tag Manager (noscript) - Moved to reduce blocking */}
         <noscript>
           <iframe
             src={`https://www.googletagmanager.com/ns.html?id=${content.gtm}`}
@@ -200,6 +201,21 @@ export default function RootLayout({
         <div className="pt-5 sm:pt-5">{children}</div>
         <Footer />
         <StickyGetStartButton />
+        
+        {/* Load GTM after page content */}
+        <Script
+          id="gtm-script"
+          strategy="afterInteractive"
+          dangerouslySetInnerHTML={{
+            __html: `
+              (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+              new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+              j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+              'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+              })(window,document,'script','dataLayer','${content.gtm}');
+            `,
+          }}
+        />
       </body>
     </html>
   );

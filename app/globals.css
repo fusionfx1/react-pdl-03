@@ -3,12 +3,14 @@
 @tailwind components;
 @tailwind utilities;
 
+/* Critical CSS - Above the fold styles */
 body {
   font-family: "Poppins", sans-serif;
   color: #0c2820;
   font-weight: 200;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  font-display: swap;
 }
 
 .my-container {
@@ -18,6 +20,29 @@ body {
   margin: 0 auto;
 }
 
+/* Critical above-the-fold styles */
+.bg-green-dark {
+  background-color: #003566;
+}
+
+.text-white {
+  color: white;
+}
+
+.bg-gradient-to-r {
+  background-image: linear-gradient(to right, var(--tw-gradient-stops));
+}
+
+.from-custom-blue {
+  --tw-gradient-from: #003566;
+  --tw-gradient-to: rgb(0 53 102 / 0);
+  --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to);
+}
+
+.to-custom-blue-light {
+  --tw-gradient-to: #0466c8;
+}
+
 /* Mobile-first responsive container */
 @media (max-width: 640px) {
   .my-container {
@@ -25,41 +50,44 @@ body {
   }
 }
 
-.rangeContainer {
-  width: 80%;
-  margin: 20px auto;
-}
+/* Defer non-critical styles */
+@media (min-width: 768px) {
+  .rangeContainer {
+    width: 80%;
+    margin: 20px auto;
+  }
 
-.rangeInput {
-  -webkit-appearance: none;
-  width: 100%;
-  height: 10px;
-  border-radius: 5px;
-  outline: none;
-  z-index: 0;
-}
+  .rangeInput {
+    -webkit-appearance: none;
+    width: 100%;
+    height: 10px;
+    border-radius: 5px;
+    outline: none;
+    z-index: 0;
+  }
 
-.rangeInput::-webkit-slider-thumb {
-  -webkit-appearance: none;
-  appearance: none;
-  height: 40px;
-  width: 40px;
-  top: -20px;
-  position: relative;
-  background: transparent;
-  background-image: url("https://loans.cashloansexpress.com/wp-content/uploads/2022/01/arrows.svg");
-  background-size: cover;
-  border-radius: 50%;
-  transition: 0.2s ease-in-out;
-  transform: rotateZ(var(--thumb-rotate, 0deg));
-}
+  .rangeInput::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    height: 40px;
+    width: 40px;
+    top: -20px;
+    position: relative;
+    background: transparent;
+    background-image: url("https://loans.cashloansexpress.com/wp-content/uploads/2022/01/arrows.svg");
+    background-size: cover;
+    border-radius: 50%;
+    transition: 0.2s ease-in-out;
+    transform: rotateZ(var(--thumb-rotate, 0deg));
+  }
 
-.rangeInput::-webkit-slider-runnable-track {
-  width: 100%;
-  height: 5px;
-  cursor: pointer;
-  border: 1px solid rgb(188, 188, 188);
-  background-color: white;
+  .rangeInput::-webkit-slider-runnable-track {
+    width: 100%;
+    height: 5px;
+    cursor: pointer;
+    border: 1px solid rgb(188, 188, 188);
+    background-color: white;
+  }
 }
 
 /* Mobile touch optimization */
@@ -103,5 +131,52 @@ body {
   body {
     text-rendering: optimizeLegibility;
     -webkit-text-size-adjust: 100%;
+  }
+}
+
+/* Performance optimizations */
+* {
+  box-sizing: border-box;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Reduce layout shift */
+.aspect-ratio-16-9 {
+  aspect-ratio: 16 / 9;
+}
+
+.aspect-ratio-1-1 {
+  aspect-ratio: 1 / 1;
+}
+
+/* Optimize animations */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+/* GPU acceleration for smooth animations */
+.transform {
+  transform: translateZ(0);
+  will-change: transform;
+}
+
+/* Optimize hover states */
+@media (hover: hover) {
+  .hover\:scale-105:hover {
+    transform: scale(1.05);
+  }
+  
+  .hover\:shadow-lg:hover {
+    box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -2px rgb(0 0 0 / 0.05);
   }
 }

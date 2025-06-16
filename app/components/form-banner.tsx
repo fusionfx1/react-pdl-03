@@ -13,6 +13,12 @@ const priceList = [200, 500, 1000, 2500, 5000];
 const FormBanner = (props: Props) => {
   const [selectedIndex, setSelectedIndex] = useState(2); // เริ่มต้นที่ $1000
   const [value, setValue] = useState(priceList[2]); // $1000
+  const [isLoaded, setIsLoaded] = useState(false);
+
+  // Optimize component loading
+  useEffect(() => {
+    setIsLoaded(true);
+  }, []);
 
   const handleChange = (e: any) => {
     const sliderValue = parseInt(e.target.value);
@@ -25,10 +31,34 @@ const FormBanner = (props: Props) => {
     setValue(priceList[index]);
   };
 
+  // Prevent layout shift during loading
+  if (!isLoaded) {
+    return (
+      <div className="bg-white rounded-lg w-full max-w-[350px] sm:max-w-[450px] md:max-w-[550px] mx-auto p-6 sm:p-8 lg:p-10 text-black shadow-xl min-h-[400px] animate-pulse">
+        <div className="space-y-6">
+          <div className="h-12 bg-gray-200 rounded"></div>
+          <div className="h-8 bg-gray-200 rounded"></div>
+          <div className="space-y-2">
+            <div className="grid grid-cols-2 sm:grid-cols-4 gap-2">
+              {[1,2,3,4].map((i) => (
+                <div key={i} className="h-12 bg-gray-200 rounded"></div>
+              ))}
+            </div>
+            <div className="h-12 bg-gray-200 rounded"></div>
+          </div>
+          <div className="h-12 bg-gray-200 rounded"></div>
+          <div className="h-12 bg-gray-200 rounded"></div>
+        </div>
+      </div>
+    );
+  }
+
   return (
     <div className="bg-white rounded-lg w-full max-w-[350px] sm:max-w-[450px] md:max-w-[550px] mx-auto p-6 sm:p-8 lg:p-10 text-black shadow-xl">
       <Column gap={6}>
-        <p className="text-black font-medium text-3xl sm:text-4xl lg:text-5xl">${value.toLocaleString()}</p>
+        <p className="text-black font-medium text-3xl sm:text-4xl lg:text-5xl" aria-live="polite">
+          ${value.toLocaleString()}
+        </p>
         
         {/* Custom Slider */}
         <div className="relative">
@@ -43,14 +73,16 @@ const FormBanner = (props: Props) => {
             style={{
               background: `linear-gradient(to right, #003566 0%, #003566 ${(selectedIndex / 4) * 100}%, #E5E7EB ${(selectedIndex / 4) * 100}%, #E5E7EB 100%)`
             }}
+            aria-label={`Loan amount selector, current value $${value.toLocaleString()}`}
           />
-          <div className="flex justify-between mt-3">
+          <div className="flex justify-between mt-3" role="presentation">
             {priceList.map((amount, index) => (
               <div
                 key={index}
                 className={`w-3 h-3 sm:w-4 sm:h-4 rounded-full ${
                   selectedIndex === index ? 'bg-custom-blue' : 'bg-gray-300'
                 } transition-colors`}
+                aria-hidden="true"
               />
             ))}
           </div>
@@ -69,6 +101,8 @@ const FormBanner = (props: Props) => {
                     ? 'bg-custom-blue text-white shadow-md'
                     : 'bg-gray-100 text-gray-700 hover:bg-gray-200 active:bg-gray-300'
                 }`}
+                aria-pressed={selectedIndex === key}
+                aria-label={`Select loan amount $${item.toLocaleString()}`}
               >
                 ${item.toLocaleString()}
               </button>
@@ -83,6 +117,8 @@ const FormBanner = (props: Props) => {
                 ? 'bg-custom-blue text-white shadow-md'
                 : 'bg-gray-100 text-gray-700 hover:bg-gray-200 active:bg-gray-300'
             }`}
+            aria-pressed={selectedIndex === 4}
+            aria-label="Select maximum loan amount $5,000"
           >
             $5,000+
           </button>
@@ -94,7 +130,7 @@ const FormBanner = (props: Props) => {
 
         {/* Security Message with Icon */}
         <div className="flex items-center justify-center gap-2 text-xs sm:text-sm text-gray-600 bg-green-50 border border-green-200 rounded-lg p-3">
-          <BsShieldLockFill className="text-green-600 w-4 h-4 flex-shrink-0" />
+          <BsShieldLockFill className="text-green-600 w-4 h-4 flex-shrink-0" aria-hidden="true" />
           <span className="text-center">We use 256 bit SSL technology to encrypt your data.</span>
         </div>
       </Column>

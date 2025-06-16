@@ -10,6 +10,7 @@ type Props = {};
 const StickyGetStartButton = (props: Props) => {
   const [isVisible, setIsVisible] = useState(false);
   const [isClosed, setIsClosed] = useState(false);
+  const [isLoaded, setIsLoaded] = useState(false);
 
   // Show button when page is scrolled down
   const toggleVisibility = () => {
@@ -21,8 +22,14 @@ const StickyGetStartButton = (props: Props) => {
   };
 
   useEffect(() => {
-    window.addEventListener("scroll", toggleVisibility);
+    // Defer loading to improve initial page performance
+    const timer = setTimeout(() => {
+      setIsLoaded(true);
+      window.addEventListener("scroll", toggleVisibility, { passive: true });
+    }, 1000);
+
     return () => {
+      clearTimeout(timer);
       window.removeEventListener("scroll", toggleVisibility);
     };
   }, []);
@@ -31,8 +38,8 @@ const StickyGetStartButton = (props: Props) => {
     setIsClosed(true);
   };
 
-  // Don't render if closed
-  if (isClosed) return null;
+  // Don't render if closed or not loaded
+  if (isClosed || !isLoaded) return null;
 
   return (
     <div className="fixed bottom-4 left-4 sm:bottom-6 sm:left-6 z-50">
@@ -48,7 +55,7 @@ const StickyGetStartButton = (props: Props) => {
           <button
             onClick={handleClose}
             className="absolute -top-3 -right-3 w-8 h-8 bg-gradient-to-br from-gray-100 to-gray-200 hover:from-red-100 hover:to-red-200 rounded-full flex items-center justify-center transition-all duration-300 hover:scale-110 active:scale-95 touch-manipulation shadow-lg border border-white/50 backdrop-blur-sm group"
-            aria-label="Close"
+            aria-label="Close sticky loan application button"
           >
             <AiOutlineClose className="text-gray-600 group-hover:text-red-600 w-4 h-4 transition-colors duration-300" />
             <div className="absolute inset-0 rounded-full bg-gradient-to-br from-white/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
