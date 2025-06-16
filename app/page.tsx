@@ -9,22 +9,22 @@ import { content } from "./content/text";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: `${content.domain} - Fast Online Personal Loans | Instant Approval | Up to $5,000`,
-  description: "Apply for personal loans online with ScratchPay.com. Get instant approval decisions, same-day funding, and flexible repayment terms. Loans from $200-$5,000. Bad credit welcome!",
-  keywords: "personal loans online, fast cash loans, instant loan approval, emergency loans, bad credit loans, same day funding, quick money, loan application, cash advance",
+  title: `${content.domain} - Fast Online Loans | Instant Approval | Up to $5,000`,
+  description: "Apply for loans online with ScratchPay.com. Get instant approval decisions, same-day funding, and flexible repayment terms. Loans from $200-$5,000. Bad credit welcome!",
+  keywords: "loans online, fast cash loans, instant loan approval, emergency loans, bad credit loans, same day funding, quick money, loan application, cash advance",
   alternates: {
     canonical: `https://${content.domain.toLowerCase()}`,
   },
   openGraph: {
-    title: `${content.domain} - Fast Personal Loans Online | Instant Approval`,
-    description: "Get approved for personal loans up to $5,000 in minutes. Fast online application, instant decisions, same-day funding. Apply now!",
+    title: `${content.domain} - Fast Loans Online | Instant Approval`,
+    description: "Get approved for loans up to $5,000 in minutes. Fast online application, instant decisions, same-day funding. Apply now!",
     url: `https://${content.domain.toLowerCase()}`,
     images: [
       {
         url: '/images/home-og.jpg',
         width: 1200,
         height: 630,
-        alt: 'Fast Online Personal Loans - ScratchPay.com',
+        alt: 'Fast Online Loans - ScratchPay.com',
       },
     ],
   },

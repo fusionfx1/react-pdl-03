@@ -4,9 +4,9 @@ import { content } from "../content/text";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: `Responsible Lending Practices - ${content.domain} | Ethical Personal Loans`,
-  description: "Learn about ScratchPay.com's commitment to responsible lending practices. We promote ethical personal loan standards and help consumers make informed financial decisions.",
-  keywords: "responsible lending, ethical loans, fair lending practices, personal loan standards, borrower protection, financial education",
+  title: `Responsible Lending Practices - ${content.domain} | Ethical Loans`,
+  description: "Learn about ScratchPay.com's commitment to responsible lending practices. We promote ethical loan standards and help consumers make informed financial decisions.",
+  keywords: "responsible lending, ethical loans, fair lending practices, loan standards, borrower protection, financial education",
   alternates: {
     canonical: `https://${content.domain.toLowerCase()}/responsible-lending`,
   },
@@ -27,30 +27,30 @@ export default function ResponsibleLending() {
             </h1>
             <p className="text-gray-600">
               At {content.domain}, we are committed to promoting responsible lending practices 
-              and helping consumers make informed financial decisions about personal loans.
+              and helping consumers make informed financial decisions about loans.
             </p>
           </header>
           
           <main className="prose prose-gray max-w-none space-y-6 text-sm sm:text-base leading-relaxed">
             <section>
-              <h2 className="text-xl sm:text-2xl font-semibold text-gray-800 mb-4">Our Commitment to Responsible Personal Lending</h2>
+              <h2 className="text-xl sm:text-2xl font-semibold text-gray-800 mb-4">Our Commitment to Responsible Lending</h2>
               <p className="text-gray-600 mb-4">
                 We work only with lenders who adhere to responsible lending standards and comply with 
                 applicable federal and state regulations. Our network lenders are committed to:
               </p>
               <ul className="list-disc pl-6 text-gray-600 space-y-2">
-                <li>Transparent disclosure of all personal loan terms and conditions</li>
+                <li>Transparent disclosure of all loan terms and conditions</li>
                 <li>Fair and non-discriminatory lending practices</li>
-                <li>Reasonable assessment of borrower's ability to repay personal loans</li>
+                <li>Reasonable assessment of borrower's ability to repay loans</li>
                 <li>Compliance with applicable interest rate and fee regulations</li>
                 <li>Clear communication throughout the loan process</li>
               </ul>
             </section>
 
             <section>
-              <h2 className="text-xl sm:text-2xl font-semibold text-gray-800 mb-4">Before You Apply for a Personal Loan</h2>
+              <h2 className="text-xl sm:text-2xl font-semibold text-gray-800 mb-4">Before You Apply for a Loan</h2>
               <p className="text-gray-600 mb-4">
-                Before applying for any personal loan, please consider the following:
+                Before applying for any loan, please consider the following:
               </p>
               <ul className="list-disc pl-6 text-gray-600 space-y-2">
                 <li>Only borrow what you need and can afford to repay</li>
@@ -62,18 +62,18 @@ export default function ResponsibleLending() {
             </section>
 
             <section>
-              <h2 className="text-xl sm:text-2xl font-semibold text-gray-800 mb-4">Understanding Personal Loan Terms</h2>
+              <h2 className="text-xl sm:text-2xl font-semibold text-gray-800 mb-4">Understanding Loan Terms</h2>
               <div className="bg-yellow-50 border border-yellow-200 rounded-lg p-6 mb-6">
-                <h3 className="text-lg font-semibold text-yellow-800 mb-3">Important Personal Loan Information</h3>
+                <h3 className="text-lg font-semibold text-yellow-800 mb-3">Important Loan Information</h3>
                 <ul className="text-yellow-700 space-y-2 text-sm">
                   <li><strong>APR Range:</strong> 5.99% to 35.99% for qualified consumers</li>
-                  <li><strong>Personal Loan Amounts:</strong> Typically $200 to $5,000</li>
+                  <li><strong>Loan Amounts:</strong> Typically $200 to $5,000</li>
                   <li><strong>Repayment Terms:</strong> 61 days to 3 years</li>
                   <li><strong>Fees:</strong> May include origination fees, late fees, and other charges</li>
                 </ul>
               </div>
               <p className="text-gray-600">
-                Actual personal loan terms will vary based on your creditworthiness, state regulations, 
+                Actual loan terms will vary based on your creditworthiness, state regulations, 
                 and lender policies. Always review and understand the specific terms offered to you.
               </p>
             </section>
@@ -95,7 +95,7 @@ export default function ResponsibleLending() {
             <section>
               <h2 className="text-xl sm:text-2xl font-semibold text-gray-800 mb-4">If You're Having Financial Trouble</h2>
               <p className="text-gray-600 mb-4">
-                If you're experiencing financial difficulties with your personal loan, consider these options:
+                If you're experiencing financial difficulties with your loan, consider these options:
               </p>
               <ul className="list-disc pl-6 text-gray-600 space-y-2">
                 <li>Contact your lender immediately to discuss your situation</li>

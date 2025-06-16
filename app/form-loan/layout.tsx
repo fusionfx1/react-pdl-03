@@ -3,9 +3,9 @@ import "../globals.css";
 import { content } from "../content/text";
 
 export const metadata: Metadata = {
-  title: `Personal Loan Application - ${content.domain} | Apply for Fast Cash Loans`,
-  description: "Complete your personal loan application with ScratchPay.com. Fast, secure online form for loans up to $5,000. Get instant approval decisions and same-day funding.",
-  keywords: "loan application, personal loan form, apply for loan, fast cash application, online loan application, instant approval",
+  title: `Loan Application - ${content.domain} | Apply for Fast Cash Loans`,
+  description: "Complete your loan application with ScratchPay.com. Fast, secure online form for loans up to $5,000. Get instant approval decisions and same-day funding.",
+  keywords: "loan application, loan form, apply for loan, fast cash application, online loan application, instant approval",
   robots: {
     index: false, // Don't index the application form page
     follow: true,

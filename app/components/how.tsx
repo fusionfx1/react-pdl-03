@@ -25,7 +25,7 @@ const features = [
   {
     image: "/images/coins.png",
     title: "Flexible Loan Amounts",
-    description: "Personal loan amounts from $200 to $5,000 to meet your needs",
+    description: "Loan amounts from $200 to $5,000 to meet your needs",
     color: "from-purple-500 to-purple-600",
     alt: "Stack of coins representing loan amounts",
     priority: false
@@ -49,7 +49,7 @@ const How = (props: Props) => {
             How {content.domain} Helps You Get Fast Loans
           </h2>
           <p className="text-lg sm:text-xl text-gray-600 max-w-2xl mx-auto">
-            We make getting a personal loan simple, fast, and secure with our streamlined online process
+            We make getting a loan simple, fast, and secure with our streamlined online process
           </p>
         </header>
 

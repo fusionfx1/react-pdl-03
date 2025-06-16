@@ -18,9 +18,9 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: `${content.domain} - Fast Online Loans | Quick Cash Advance | Personal Loans Up to $5,000`,
-  description: "Get approved for personal loans up to $5,000 with ScratchPay.com. Fast online application, instant decisions, and same-day funding. Bad credit OK. Apply now for emergency cash loans.",
-  keywords: "personal loans, fast loans, online loans, cash advance, emergency loans, bad credit loans, instant approval, same day funding, quick cash, loan application",
+  title: `${content.domain} - Fast Online Loans | Quick Cash Advance | Loans Up to $5,000`,
+  description: "Get approved for loans up to $5,000 with ScratchPay.com. Fast online application, instant decisions, and same-day funding. Bad credit OK. Apply now for emergency cash loans.",
+  keywords: "loans, fast loans, online loans, cash advance, emergency loans, bad credit loans, instant approval, same day funding, quick cash, loan application",
   authors: [{ name: content.domain }],
   creator: content.domain,
   publisher: content.domain,
@@ -40,14 +40,14 @@ export const metadata: Metadata = {
     locale: 'en_US',
     url: `https://${content.domain.toLowerCase()}`,
     siteName: content.domain,
-    title: `${content.domain} - Fast Personal Loans Online | Up to $5,000`,
-    description: "Quick online loan application with instant decisions. Get personal loans up to $5,000 with flexible terms. Bad credit welcome. Apply in minutes!",
+    title: `${content.domain} - Fast Loans Online | Up to $5,000`,
+    description: "Quick online loan application with instant decisions. Get loans up to $5,000 with flexible terms. Bad credit welcome. Apply in minutes!",
     images: [
       {
         url: '/images/og-image.jpg',
         width: 1200,
         height: 630,
-        alt: `${content.domain} - Fast Online Personal Loans`,
+        alt: `${content.domain} - Fast Online Loans`,
       },
     ],
   },
@@ -55,8 +55,8 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     site: `@${content.domain.replace('.com', '')}`,
     creator: `@${content.domain.replace('.com', '')}`,
-    title: `${content.domain} - Fast Personal Loans Online`,
-    description: "Get approved for personal loans up to $5,000. Fast application, instant decisions, same-day funding. Apply now!",
+    title: `${content.domain} - Fast Loans Online`,
+    description: "Get approved for loans up to $5,000. Fast application, instant decisions, same-day funding. Apply now!",
     images: ['/images/twitter-card.jpg'],
   },
   alternates: {
@@ -93,7 +93,7 @@ export default function RootLayout({
     "@context": "https://schema.org",
     "@type": "FinancialService",
     "name": content.domain,
-    "description": "Fast online personal loans up to $5,000 with instant approval and same-day funding",
+    "description": "Fast online loans up to $5,000 with instant approval and same-day funding",
     "url": `https://${content.domain.toLowerCase()}`,
     "logo": `https://${content.domain.toLowerCase()}/images/logo.png`,
     "image": `https://${content.domain.toLowerCase()}/images/og-image.jpg`,
@@ -108,18 +108,18 @@ export default function RootLayout({
       "addressCountry": "US"
     },
     "areaServed": "US",
-    "serviceType": "Personal Loans",
+    "serviceType": "Loans",
     "priceRange": "$200-$5000",
     "hasOfferCatalog": {
       "@type": "OfferCatalog",
-      "name": "Personal Loan Products",
+      "name": "Loan Products",
       "itemListElement": [
         {
           "@type": "Offer",
           "itemOffered": {
             "@type": "LoanOrCredit",
-            "name": "Personal Loan",
-            "description": "Fast personal loans from $200 to $5,000"
+            "name": "Loan",
+            "description": "Fast loans from $200 to $5,000"
           },
           "priceSpecification": {
             "@type": "PriceSpecification",

@@ -1,7 +1,7 @@
 {
-  "name": "ScratchPay.com - Fast Personal Loans",
+  "name": "ScratchPay.com - Fast Loans",
   "short_name": "ScratchPay",
-  "description": "Fast online personal loans up to $5,000 with instant approval",
+  "description": "Fast online loans up to $5,000 with instant approval",
   "start_url": "/",
   "display": "standalone",
   "background_color": "#003566",

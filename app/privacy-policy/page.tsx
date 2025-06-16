@@ -3,7 +3,7 @@ import { content } from "../content/text";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: `Privacy Policy - ${content.domain} | Personal Loan Data Protection`,
+  title: `Privacy Policy - ${content.domain} | Loan Data Protection`,
   description: "Read ScratchPay.com's privacy policy to understand how we collect, use, and protect your personal information during the loan application process. Your privacy is our priority.",
   keywords: "privacy policy, data protection, personal information, loan application privacy, financial data security",
   alternates: {
@@ -35,7 +35,7 @@ export default function PrivacyPolicy() {
               <h2 className="text-xl sm:text-2xl font-semibold text-gray-800 mb-4">1. Personal Information We Collect</h2>
               <p className="text-gray-600 mb-4">
                 We collect information you provide directly to us during the loan application process, such as when you create an account, 
-                apply for a personal loan, or contact us for customer support. This may include:
+                apply for a loan, or contact us for customer support. This may include:
               </p>
               <ul className="list-disc pl-6 text-gray-600 space-y-2">
                 <li>Personal identification information (full name, address, phone number, email address)</li>
@@ -49,7 +49,7 @@ export default function PrivacyPolicy() {
               <h2 className="text-xl sm:text-2xl font-semibold text-gray-800 mb-4">2. How We Use Your Personal Information</h2>
               <p className="text-gray-600 mb-4">We use the information we collect to:</p>
               <ul className="list-disc pl-6 text-gray-600 space-y-2">
-                <li>Process and evaluate your personal loan application</li>
+                <li>Process and evaluate your loan application</li>
                 <li>Connect you with potential lenders in our network</li>
                 <li>Verify your identity and prevent fraud</li>
                 <li>Communicate with you about your loan application and our services</li>
@@ -62,7 +62,7 @@ export default function PrivacyPolicy() {
               <h2 className="text-xl sm:text-2xl font-semibold text-gray-800 mb-4">3. Information Sharing with Loan Partners</h2>
               <p className="text-gray-600 mb-4">We may share your information with:</p>
               <ul className="list-disc pl-6 text-gray-600 space-y-2">
-                <li>Lenders in our network who may be able to provide you with personal loan products</li>
+                <li>Lenders in our network who may be able to provide you with loan products</li>
                 <li>Service providers who assist us in operating our loan matching business</li>
                 <li>Credit reporting agencies and verification services</li>
                 <li>Law enforcement or regulatory agencies when required by law</li>

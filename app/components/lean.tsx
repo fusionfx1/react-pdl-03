@@ -11,7 +11,7 @@ const Lean = (props: Props) => {
       <div className="my-container">
         <header className="text-center mb-12 sm:mb-16 px-4 sm:px-0">
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-800 mb-4">
-            Personal Loan Information & Rates
+            Loan Information & Rates
           </h2>
           <p className="text-lg sm:text-xl text-gray-600 max-w-2xl mx-auto">
             Transparent loan pricing and terms to help you make informed financial decisions
@@ -22,7 +22,7 @@ const Lean = (props: Props) => {
           {/* APR Disclosure */}
           <article className="bg-white rounded-2xl p-6 sm:p-8 lg:p-10 shadow-lg">
             <h3 className="text-xl sm:text-2xl lg:text-3xl font-bold text-gray-800 mb-4 sm:mb-6">
-              Annual Percentage Rate (APR) for Personal Loans
+              Annual Percentage Rate (APR) for Loans
             </h3>
             <div className="space-y-4 text-gray-600 leading-relaxed text-sm sm:text-base">
               <p>
@@ -68,7 +68,7 @@ const Lean = (props: Props) => {
           {/* Examples Table */}
           <article className="bg-white rounded-2xl p-6 sm:p-8 lg:p-10 shadow-lg">
             <h3 className="text-xl sm:text-2xl lg:text-3xl font-bold text-gray-800 mb-4 sm:mb-6">
-              Personal Loan Examples - Costs & APR Calculator
+              Loan Examples - Costs & APR Calculator
             </h3>
             <p className="text-gray-600 mb-6 text-sm sm:text-base">Representative loan examples showing different amounts, rates, and terms</p>
             <div className="overflow-hidden rounded-xl border border-gray-200">

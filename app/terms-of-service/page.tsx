@@ -4,9 +4,9 @@ import { content } from "../content/text";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: `Terms of Service - ${content.domain} | Personal Loan Agreement Terms`,
-  description: "Read the terms of service for ScratchPay.com's personal loan matching service. Understand your rights and responsibilities when applying for loans through our platform.",
-  keywords: "terms of service, loan agreement, personal loan terms, borrower agreement, loan matching service terms",
+  title: `Terms of Service - ${content.domain} | Loan Agreement Terms`,
+  description: "Read the terms of service for ScratchPay.com's loan matching service. Understand your rights and responsibilities when applying for loans through our platform.",
+  keywords: "terms of service, loan agreement, loan terms, borrower agreement, loan matching service terms",
   alternates: {
     canonical: `https://${content.domain.toLowerCase()}/terms-of-service`,
   },
@@ -41,21 +41,21 @@ export default function TermsOfService() {
             </section>
 
             <section>
-              <h2 className="text-xl sm:text-2xl font-semibold text-gray-800 mb-4">2. Personal Loan Matching Service Description</h2>
+              <h2 className="text-xl sm:text-2xl font-semibold text-gray-800 mb-4">2. Loan Matching Service Description</h2>
               <p className="text-gray-600 mb-4">
-                {content.domain} is a personal loan matching service that connects potential borrowers with lenders in our network. 
+                {content.domain} is a loan matching service that connects potential borrowers with lenders in our network. 
                 We are not a lender and do not make credit decisions. Key points about our loan matching service:
               </p>
               <ul className="list-disc pl-6 text-gray-600 space-y-2">
                 <li>We do not guarantee loan approval or specific terms</li>
-                <li>Personal loan terms are determined by individual lenders</li>
+                <li>Loan terms are determined by individual lenders</li>
                 <li>Not all applicants will qualify for a loan</li>
                 <li>We may receive compensation from lenders for successful referrals</li>
               </ul>
             </section>
 
             <section>
-              <h2 className="text-xl sm:text-2xl font-semibold text-gray-800 mb-4">3. Personal Loan Eligibility Requirements</h2>
+              <h2 className="text-xl sm:text-2xl font-semibold text-gray-800 mb-4">3. Loan Eligibility Requirements</h2>
               <p className="text-gray-600 mb-4">To use our loan matching service, you must:</p>
               <ul className="list-disc pl-6 text-gray-600 space-y-2">
                 <li>Be at least 18 years old</li>
