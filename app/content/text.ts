@@ -1,5 +1,5 @@
 export const content = {
-  domain: "ScratchpayCredits.com",
+  domain: "ScratchPayCredits.com",
   address: "591 Laurel Common Matfield Green, KS 66862",
   company: "74512",
   colors: "#245bdf",
