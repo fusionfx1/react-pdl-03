@@ -55,7 +55,7 @@ const Banner = (props: Props) => {
             <Column className="gap-3 sm:gap-4 lg:gap-6">
               <div className="font-bold text-lg sm:text-xl">{content.domain}</div>
               <h1 className="text-3xl sm:text-4xl lg:text-5xl font-medium px-4 sm:px-0">
-                Fast Online Loans Up to $5,000
+                {content.title1}
               </h1>
               <h2 className="text-xl sm:text-2xl lg:text-3xl font-normal px-4 sm:px-0">
                 {getSubtitle()}
