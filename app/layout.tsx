@@ -44,7 +44,7 @@ export const metadata: Metadata = {
     description: "Quick online loan application with instant decisions. Get loans up to $5,000 with flexible terms. Bad credit welcome. Apply in minutes!",
     images: [
       {
-        url: '/images/web.png',
+        url: '/images/og.png',
         width: 1200,
         height: 630,
         alt: `${content.domain} - Fast Online Loans`,
@@ -63,7 +63,7 @@ export const metadata: Metadata = {
     creator: `@${content.domain.replace('.com', '')}`,
     title: `${content.domain} - Fast Loans Online`,
     description: "Get approved for loans up to $5,000. Fast application, instant decisions, same-day funding. Apply now!",
-    images: ['/images/web.png'],
+    images: ['/images/og.png'],
   },
   alternates: {
     canonical: `https://${content.domain.toLowerCase()}`,
@@ -102,7 +102,7 @@ export default function RootLayout({
     "description": "Fast online loans up to $5,000 with instant approval and same-day funding",
     "url": `https://${content.domain.toLowerCase()}`,
     "logo": `https://${content.domain.toLowerCase()}/images/logo.png`,
-    "image": `https://${content.domain.toLowerCase()}/images/web.png`,
+    "image": `https://${content.domain.toLowerCase()}/images/og.png`,
     "telephone": "1-800-SCRATCH",
     "email": `info@${content.domain.toLowerCase()}`,
     "address": {
@@ -166,7 +166,7 @@ export default function RootLayout({
         
         {/* Preload Critical Resources */}
         <link rel="preload" href="/images/icon.png" as="image" type="image/png" />
-        <link rel="preload" href="/images/web.png" as="image" type="image/png" />
+        <link rel="preload" href="/images/og.png" as="image" type="image/png" />
         <link rel="preload" href="/images/cellphone.png" as="image" type="image/png" />
         <link rel="preload" href="/images/forward.png" as="image" type="image/png" />
         <link rel="preload" href="/images/coins.png" as="image" type="image/png" />
