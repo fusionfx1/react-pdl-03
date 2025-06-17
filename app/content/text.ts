@@ -1,11 +1,11 @@
 export const content = {
-  domain: "Scratchpay.com",
-  address: "8807 Olga Streets Apt. 357 Warwick, RI 02889",
-  company: "89741",
+  domain: "ScratchpayCredits.com",
+  address: "591 Laurel Common Matfield Green, KS 66862",
+  company: "74512",
   colors: "#245bdf",
   title1: "Let's Get to The Point.",
   title2: "Medical Financing with Heart.",
   aid: "14881",
   gtm: "GTM-XXXXXXX", // แทนที่ด้วย GTM ID จริงของคุณ
-  ref: "bigbuckloans",
+  ref: "ScratchpayCredits",
 };
