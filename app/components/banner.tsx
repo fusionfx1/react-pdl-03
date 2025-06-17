@@ -43,7 +43,7 @@ const Banner = (props: Props) => {
     } else if (offer) {
       return `${offer} • Same Day Funding • Bad Credit OK`;
     } else {
-      return "Instant Approval • Same Day Funding • Bad Credit OK";
+      return "Medical Financing with Heart.";
     }
   };
 
