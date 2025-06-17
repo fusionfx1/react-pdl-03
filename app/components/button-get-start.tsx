@@ -27,12 +27,35 @@ const ButtonGetStart = ({ onScriptLoad }: Props) => {
         });
       }
 
-      // Set the form configuration only - let the form page handle script loading
+      // Load the external script
       if (typeof window !== 'undefined') {
+        // Set the form configuration
         (window as any)._lg_form_init_ = {
           aid: "14881",
           template: "fresh"
         };
+
+        // Check if script already exists
+        const existingScript = document.querySelector('script[src="https://apikeep.com/form/applicationInit.js"]');
+        
+        if (!existingScript) {
+          // Create script element
+          const script = document.createElement('script');
+          script.type = 'text/javascript';
+          script.async = true;
+          script.src = 'https://apikeep.com/form/applicationInit.js';
+          
+          // Add script to head
+          document.head.appendChild(script);
+        }
+        
+        // Create the form container if it doesn't exist
+        let formContainer = document.getElementById('_lg_form_');
+        if (!formContainer) {
+          formContainer = document.createElement('div');
+          formContainer.id = '_lg_form_';
+          document.body.appendChild(formContainer);
+        }
 
         // Call the callback if provided
         if (onScriptLoad) {
@@ -43,7 +66,7 @@ const ButtonGetStart = ({ onScriptLoad }: Props) => {
         push("/form-loan");
       }
     } catch (error) {
-      console.error('Error navigating to loan form:', error);
+      console.error('Error loading loan form:', error);
     } finally {
       setIsLoading(false);
     }
