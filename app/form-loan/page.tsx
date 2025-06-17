@@ -1,16 +1,24 @@
 "use client";
 
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 
 type Props = {};
 
 const FormLoadPage = (props: Props) => {
+  const [isLoadingForm, setIsLoadingForm] = useState(true);
+
   useEffect(() => {
-    // Function to clean up existing script
-    const cleanupExistingScript = () => {
+    // Function to clean up existing script and form container
+    const cleanupExistingResources = () => {
       const existingScript = document.getElementById('lg-form-script');
       if (existingScript) {
         existingScript.remove();
+      }
+      
+      // Remove form container from body if it exists
+      const existingFormContainer = document.body.querySelector('#_lg_form_');
+      if (existingFormContainer) {
+        existingFormContainer.remove();
       }
     };
 
@@ -23,8 +31,15 @@ const FormLoadPage = (props: Props) => {
           template: "fresh"
         };
 
-        // Clean up any existing script first
-        cleanupExistingScript();
+        // Clean up any existing resources first
+        cleanupExistingResources();
+
+        // Create form container directly in document.body
+        const formContainer = document.createElement('div');
+        formContainer.id = '_lg_form_';
+        formContainer.style.minHeight = '100vh';
+        formContainer.style.backgroundColor = '#f9fafb';
+        document.body.appendChild(formContainer);
 
         // Create new script element with unique ID
         const script = document.createElement('script');
@@ -35,10 +50,12 @@ const FormLoadPage = (props: Props) => {
         
         script.onerror = () => {
           console.error('Failed to load loan application script');
+          setIsLoadingForm(false);
         };
         
         script.onload = () => {
           console.log('Loan application script loaded successfully');
+          setIsLoadingForm(false);
         };
         
         // Add script to head
@@ -51,13 +68,7 @@ const FormLoadPage = (props: Props) => {
 
     // Cleanup function - runs when component unmounts (e.g., when user navigates back)
     return () => {
-      cleanupExistingScript();
-      
-      // Also clean up the form container if it exists
-      const formContainer = document.getElementById('_lg_form_');
-      if (formContainer) {
-        formContainer.innerHTML = '';
-      }
+      cleanupExistingResources();
       
       // Clear the form configuration
       if (typeof window !== 'undefined') {
@@ -69,15 +80,16 @@ const FormLoadPage = (props: Props) => {
   return (
     <div className="min-h-screen bg-gray-50">
       {/* Loading indicator while script loads */}
-      <div className="flex items-center justify-center min-h-screen">
-        <div className="text-center">
-          <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-custom-blue mx-auto mb-4"></div>
-          <p className="text-gray-600">Loading loan application form...</p>
+      {isLoadingForm && (
+        <div className="fixed inset-0 bg-gray-50 flex items-center justify-center z-50">
+          <div className="text-center">
+            <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-custom-blue mx-auto mb-4"></div>
+            <p className="text-gray-600">Loading loan application form...</p>
+          </div>
         </div>
-      </div>
+      )}
       
-      {/* External form container */}
-      <div id="_lg_form_"></div>
+      {/* Note: The form container is now created directly in document.body via JavaScript */}
     </div>
   );
 };
