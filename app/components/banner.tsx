@@ -53,7 +53,7 @@ const Banner = (props: Props) => {
         <Column className="text-white text-center gap-6 sm:gap-8 lg:gap-10">
           <header>
             <Column className="gap-3 sm:gap-4 lg:gap-6">
-              <div className="font-bold text-lg sm:text-xl">{content.domain}</div>
+              <div className="font-bold text-lg sm:text-xl">{content.keyword}</div>
               <h1 className="text-3xl sm:text-4xl lg:text-5xl font-medium px-4 sm:px-0">
                 {content.title1}
               </h1>
