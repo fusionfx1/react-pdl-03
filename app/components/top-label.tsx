@@ -32,7 +32,7 @@ const TopLabel = (props: Props) => {
           className={` ${isScrolled ? "opacity-100" : "opacity-0"
             } border bg-white text-center p-2 sm:p-3 font-medium transition-all z-[9999] text-sm sm:text-base`}
         >
-          {`${content.domain}`}
+          {`${content.keyword}`}
         </div>
       </div>
     </div>
