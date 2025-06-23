@@ -66,8 +66,8 @@ export const metadata: Metadata = {
     'geo.region': 'US',
     'geo.placename': 'United States',
     'application-name': content.domain,
-    'msapplication-TileColor': '#B13BFF',
-    'theme-color': '#B13BFF',
+    'msapplication-TileColor': '#471396',
+    'theme-color': '#471396',
   },
   icons: {
     icon: [
@@ -78,7 +78,7 @@ export const metadata: Metadata = {
       { url: "/images/apple-touch-icon.png", sizes: "180x180", type: "image/png" },
     ],
     other: [
-      { rel: "mask-icon", url: "/images/safari-pinned-tab.svg", color: "#B13BFF" },
+      { rel: "mask-icon", url: "/images/safari-pinned-tab.svg", color: "#471396" },
     ],
   },
   manifest: "/manifest.json",

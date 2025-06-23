@@ -71,7 +71,7 @@ const FormBanner = (props: Props) => {
             onChange={handleChange}
             className="w-full h-3 bg-gray-200 rounded-lg appearance-none cursor-pointer slider touch-manipulation"
             style={{
-              background: `linear-gradient(to right, #B13BFF 0%, #B13BFF ${(selectedIndex / 4) * 100}%, #E5E7EB ${(selectedIndex / 4) * 100}%, #E5E7EB 100%)`
+              background: `linear-gradient(to right, #471396 0%, #471396 ${(selectedIndex / 4) * 100}%, #E5E7EB ${(selectedIndex / 4) * 100}%, #E5E7EB 100%)`
             }}
             aria-label={`Loan amount selector, current value $${value.toLocaleString()}`}
           />
@@ -141,7 +141,7 @@ const FormBanner = (props: Props) => {
           height: 24px;
           width: 24px;
           border-radius: 50%;
-          background: #B13BFF;
+          background: #471396;
           cursor: pointer;
           box-shadow: 0 2px 4px rgba(0,0,0,0.2);
           touch-action: manipulation;
@@ -151,7 +151,7 @@ const FormBanner = (props: Props) => {
           height: 24px;
           width: 24px;
           border-radius: 50%;
-          background: #B13BFF;
+          background: #471396;
           cursor: pointer;
           border: none;
           box-shadow: 0 2px 4px rgba(0,0,0,0.2);

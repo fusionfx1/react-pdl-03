@@ -22,7 +22,7 @@ body {
 
 /* Critical above-the-fold styles */
 .bg-green-dark {
-  background-color: #B13BFF;
+  background-color: #471396;
 }
 
 .text-white {
@@ -34,13 +34,13 @@ body {
 }
 
 .from-custom-blue {
-  --tw-gradient-from: #B13BFF;
-  --tw-gradient-to: rgb(177 59 255 / 0);
+  --tw-gradient-from: #471396;
+  --tw-gradient-to: rgb(71 19 150 / 0);
   --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to);
 }
 
 .to-custom-blue-light {
-  --tw-gradient-to: #C06BFF;
+  --tw-gradient-to: #7A47D9;
 }
 
 /* Text shadow utility for city names */
