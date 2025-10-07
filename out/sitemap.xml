@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
+  
+  <!-- Homepage -->
+  <url>
+    <loc>https://scratchpay.com/</loc>
+    <lastmod>2024-01-01</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>1.0</priority>
+    <image:image>
+      <image:loc>https://scratchpay.com/images/og-image.jpg</image:loc>
+      <image:title>ScratchPay.com - Fast Loans Online</image:title>
+      <image:caption>Get approved for loans up to $5,000 with instant decisions</image:caption>
+    </image:image>
+  </url>
+  
+  <!-- Privacy Policy -->
+  <url>
+    <loc>https://scratchpay.com/privacy-policy/</loc>
+    <lastmod>2024-01-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <!-- Terms of Service -->
+  <url>
+    <loc>https://scratchpay.com/terms-of-service/</loc>
+    <lastmod>2024-01-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <!-- Responsible Lending -->
+  <url>
+    <loc>https://scratchpay.com/responsible-lending/</loc>
+    <lastmod>2024-01-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  
+</urlset>

@@ -1,0 +1,11 @@
+User-agent: *
+Allow: /
+Disallow: /form-loan/
+Disallow: /admin/
+Disallow: /api/
+
+# Sitemap
+Sitemap: https://scratchpay.com/sitemap.xml
+
+# Crawl delay
+Crawl-delay: 1
