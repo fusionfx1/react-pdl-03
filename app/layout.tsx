@@ -4,7 +4,6 @@ import "./globals.css";
 import Footer from "./components/footer";
 import localFont from "next/font/local";
 import TopLabel from "./components/top-label";
-import StickyGetStartButton from "./components/sticky-get-start-button";
 import Script from "next/script";
 import Head from "next/head";
 import { content } from "./content/text";
@@ -201,7 +200,6 @@ export default function RootLayout({
         <TopLabel />
         <div className="pt-5 sm:pt-5">{children}</div>
         <Footer />
-        <StickyGetStartButton />
         
         {/* Load GTM after page content */}
         <Script

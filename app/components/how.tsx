@@ -57,7 +57,7 @@ const How = (props: Props) => {
           {features.map((feature, index) => (
             <article
               key={index}
-              className="group bg-white rounded-2xl p-6 sm:p-8 shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 border border-gray-100 touch-manipulation"
+              className="group bg-white rounded-2xl p-6 sm:p-8 shadow-lg hover:shadow-xl transition-all duration-200 transform hover:-translate-y-1 border border-gray-100 touch-manipulation"
             >
               <Column className="items-center text-center space-y-4 sm:space-y-6">
                 <div className="relative">

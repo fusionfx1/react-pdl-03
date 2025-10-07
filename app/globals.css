@@ -53,21 +53,6 @@ body {
   filter: drop-shadow(0 4px 6px rgba(0, 0, 0, 0.3)) drop-shadow(0 2px 4px rgba(0, 0, 0, 0.2));
 }
 
-/* Custom pulse animation for city names */
-@keyframes city-pulse {
-  0%, 100% {
-    opacity: 1;
-    transform: scale(1);
-  }
-  50% {
-    opacity: 0.9;
-    transform: scale(1.02);
-  }
-}
-
-.animate-city-pulse {
-  animation: city-pulse 2s ease-in-out infinite;
-}
 
 /* Mobile-first responsive container */
 @media (max-width: 640px) {
@@ -137,8 +122,24 @@ body {
   input[type="button"], 
   input[type="submit"], 
   input[type="range"] {
-    min-height: 44px;
-    min-width: 44px;
+    min-height: 48px;
+    min-width: 48px;
+  }
+  
+  /* Enhanced touch targets */
+  .touch-target {
+    min-height: 48px;
+    min-width: 48px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  /* Better touch feedback */
+  button:active,
+  [role="button"]:active {
+    transform: scale(0.98);
+    transition: transform 0.1s ease;
   }
 }
 
@@ -158,6 +159,16 @@ body {
     text-rendering: optimizeLegibility;
     -webkit-text-size-adjust: 100%;
   }
+  
+  /* Prevent zoom on input focus */
+  input, select, textarea {
+    font-size: 16px;
+  }
+  
+  /* Optimize scrolling performance */
+  * {
+    -webkit-overflow-scrolling: touch;
+  }
 }
 
 /* Performance optimizations */
@@ -168,6 +179,27 @@ body {
 img {
   max-width: 100%;
   height: auto;
+}
+
+/* Mobile-specific performance optimizations */
+@media (max-width: 768px) {
+  /* Reduce repaints and reflows */
+  .transform {
+    will-change: transform;
+    backface-visibility: hidden;
+    perspective: 1000px;
+  }
+  
+  /* Optimize images */
+  img {
+    image-rendering: -webkit-optimize-contrast;
+    image-rendering: crisp-edges;
+  }
+  
+  /* Reduce layout thrashing */
+  .fixed, .absolute {
+    transform: translateZ(0);
+  }
 }
 
 /* Reduce layout shift */
@@ -194,6 +226,55 @@ img {
 .transform {
   transform: translateZ(0);
   will-change: transform;
+}
+
+/* Mobile-optimized animations */
+@media (max-width: 768px) {
+  /* Reduce animation complexity on mobile */
+  .hover\:scale-105:hover {
+    transform: scale(1.01);
+  }
+  
+  .hover\:-translate-y-2:hover {
+    transform: translateY(-2px);
+  }
+  
+  /* Disable heavy effects on mobile */
+  .backdrop-blur-sm {
+    backdrop-filter: none;
+  }
+  
+  /* Optimize shadow performance */
+  .shadow-2xl {
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+  }
+}
+
+/* Safe area support for mobile devices */
+.safe-area-inset-bottom {
+  padding-bottom: env(safe-area-inset-bottom);
+}
+
+.safe-area-inset-top {
+  padding-top: env(safe-area-inset-top);
+}
+
+/* Enhanced mobile typography */
+@media (max-width: 640px) {
+  /* Improve text readability */
+  h1, h2, h3 {
+    line-height: 1.2;
+  }
+  
+  p, span, div {
+    line-height: 1.5;
+  }
+  
+  /* Better button text */
+  button {
+    font-weight: 600;
+    letter-spacing: 0.025em;
+  }
 }
 
 /* Optimize hover states */

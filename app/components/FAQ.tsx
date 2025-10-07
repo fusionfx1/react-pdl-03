@@ -8,11 +8,11 @@ type Props = {};
 const data = [
   {
     title: "What is a short term loan?",
-    content: `Short term loans are designed around addressing an immediate financial need or emergency. This could be an unexpected medical bill, a broken down car or an urgent boiler repair, etc. The loan amount range is usually up to $5,000 and the term can range from under 30 days for a payday style loan to monthly or weekly installments for an installment style loan. These emergency loans provide quick cash when you need it most.`,
+    content: `Short term loans are designed around addressing an immediate financial need or emergency. This could be an unexpected medical bill, a broken down car or an urgent boiler repair, etc. The loan amount range is usually up to $5,000 and the term can range from under 30 days for a payday style loan to monthly or weekly installments for an installment style loan. These loans may provide access to funds when you need them most.`,
   },
   {
     title: `How does ${content.domain} online loan matching work?`,
-    content: `We provide an online marketplace connecting borrowers with trusted lenders to support Americans in need of fast cash. Our website makes the process of finding a lender to meet your financial needs faster and easier! Avoid wasting hours of your time applying individually on several websites, and simply apply by submitting your information to our vast network of loan lenders through one easy online application.`,
+    content: `We provide an online marketplace connecting borrowers with trusted lenders to support Americans in need of financial assistance. Our website makes the process of finding a lender to meet your financial needs faster and easier! Avoid wasting hours of your time applying individually on several websites, and simply apply by submitting your information to our vast network of loan lenders through one easy online application.`,
   },
   {
     title: `Will ${content.domain} charge me for using its loan matching service?`,
@@ -33,7 +33,7 @@ const data = [
   },
   {
     title: `How quickly will the loan funds be deposited into my account?`,
-    content: `If a lender offers you a loan with terms and you accept straight away, it is possible to get the money deposited into your bank account within one business day. It can take up to a few days if you are accepting a loan offer on a weekend, holiday, or any other non-business day. The timing may affect how long it will take for you to receive your funds; in these cases, it may take a bit longer for the money to appear in your account.`,
+    content: `If a lender offers you a loan with terms and you accept, the funds may be deposited into your bank account within one business day. It can take up to a few days if you are accepting a loan offer on a weekend, holiday, or any other non-business day. The timing may affect how long it will take for you to receive your funds; in these cases, it may take a bit longer for the money to appear in your account.`,
   },
 ];
 

@@ -74,7 +74,7 @@ const ButtonGetStart = ({ onScriptLoad }: Props) => {
   
   return (
     <button
-      className={`w-full bg-gradient-to-r from-custom-blue to-custom-blue-light hover:from-custom-blue-dark hover:to-custom-blue active:from-custom-blue-dark active:to-custom-blue-dark text-white font-semibold py-4 px-6 sm:px-8 rounded-xl transition-all duration-300 transform hover:scale-105 active:scale-95 hover:shadow-lg focus:outline-none focus:ring-4 focus:ring-blue-300 uppercase tracking-wide text-sm sm:text-base min-h-[48px] touch-manipulation ${
+      className={`w-full bg-gradient-to-r from-custom-blue to-custom-blue-light hover:from-custom-blue-dark hover:to-custom-blue active:from-custom-blue-dark active:to-custom-blue-dark text-white font-semibold py-4 px-6 sm:px-8 rounded-xl transition-all duration-200 transform hover:scale-[1.02] active:scale-[0.98] hover:shadow-md focus:outline-none focus:ring-4 focus:ring-blue-300 uppercase tracking-wide text-sm sm:text-base min-h-[48px] touch-manipulation ${
         isLoading ? 'opacity-75 cursor-not-allowed' : ''
       }`}
       onClick={handleClick}

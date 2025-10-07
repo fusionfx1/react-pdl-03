@@ -37,12 +37,12 @@ const Modal = ({ isOpen, onClose, title, children }: Props) => {
     <div className="fixed inset-0 z-[9999] flex items-center justify-center">
       {/* Backdrop */}
       <div 
-        className="absolute inset-0 bg-black/60 backdrop-blur-sm transition-opacity duration-300"
+        className="absolute inset-0 bg-black/60 transition-opacity duration-200"
         onClick={onClose}
       />
       
       {/* Modal Content */}
-      <div className="relative bg-white rounded-2xl shadow-2xl max-w-4xl w-full mx-4 max-h-[90vh] overflow-hidden animate-in fade-in zoom-in duration-300">
+      <div className="relative bg-white rounded-2xl shadow-2xl max-w-4xl w-full mx-4 max-h-[90vh] overflow-hidden animate-in fade-in zoom-in duration-200">
         {/* Header */}
         <div className="sticky top-0 bg-white border-b border-gray-200 px-6 py-4 flex items-center justify-between">
           <h2 className="text-2xl font-bold text-gray-800">{title}</h2>

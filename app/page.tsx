@@ -5,6 +5,10 @@ import How from "./components/how";
 import Lean from "./components/lean";
 import FAQ from "./components/FAQ";
 import Column from "./components/column";
+import Disclaimer from "./components/disclaimer";
+import LoanCalculator from "./components/loan-calculator";
+import SocialProof from "./components/social-proof";
+import TrustSignals from "./components/trust-signals";
 import { content } from "./content/text";
 import type { Metadata } from "next";
 import { Suspense } from "react";
@@ -13,7 +17,7 @@ import { Suspense } from "react";
 const Banner = dynamic(() => import("./components/banner"), {
   ssr: false,
   loading: () => (
-    <div className="min-h-24 bg-green-dark py-12 sm:py-16 md:py-20 lg:py-24 animate-pulse">
+    <div className="min-h-24 bg-green-dark py-12 sm:py-16 md:py-20 lg:py-24">
       <div className="my-container">
         <div className="text-white text-center gap-6 sm:gap-8 lg:gap-10 space-y-6">
           <div className="space-y-3 sm:space-y-4 lg:space-y-6">
@@ -31,15 +35,15 @@ const Banner = dynamic(() => import("./components/banner"), {
 });
 
 export const metadata: Metadata = {
-  title: `${content.domain} - Fast Online Loans | Instant Approval | Up to $5,000`,
-  description: "Apply for loans online with ScratchPay.com. Get instant approval decisions, same-day funding, and flexible repayment terms. Loans from $200-$5,000. Bad credit welcome!",
-  keywords: "loans online, fast cash loans, instant loan approval, emergency loans, bad credit loans, same day funding, quick money, loan application, cash advance",
+  title: `${content.domain} - Connect with Lenders | Loan Marketplace | Up to $5,000`,
+  description: "Connect with trusted lenders through ScratchPay.com. Compare loan options and find lenders that may work with your situation. Loan amounts from $200-$5,000. All credit types welcome!",
+  keywords: "loan marketplace, connect with lenders, loan comparison, personal loans, emergency funding, loan application, financial services, credit options",
   alternates: {
     canonical: `https://${content.domain.toLowerCase()}`,
   },
   openGraph: {
-    title: `${content.domain} - Fast Loans Online | Instant Approval`,
-    description: "Get approved for loans up to $5,000 in minutes. Fast online application, instant decisions, same-day funding. Apply now!",
+    title: `${content.domain} - Connect with Lenders | Loan Marketplace`,
+    description: "Connect with trusted lenders for loans up to $5,000. Compare options and find lenders that may work with your situation. Start your application today!",
     url: `https://${content.domain.toLowerCase()}`,
     images: [
       {
@@ -115,7 +119,7 @@ export default function Home() {
       <main>
         <Column className="min-h-screen gap-24">
           <Suspense fallback={
-            <div className="min-h-24 bg-green-dark py-12 sm:py-16 md:py-20 lg:py-24 animate-pulse">
+            <div className="min-h-24 bg-green-dark py-12 sm:py-16 md:py-20 lg:py-24">
               <div className="my-container">
                 <div className="text-white text-center gap-6 sm:gap-8 lg:gap-10 space-y-6">
                   <div className="space-y-3 sm:space-y-4 lg:space-y-6">
@@ -133,9 +137,13 @@ export default function Home() {
             <Banner />
           </Suspense>
           <How />
+          <LoanCalculator />
           <Lean />
           <FAQ />
+          <TrustSignals />
+          <Disclaimer />
         </Column>
+        <SocialProof />
       </main>
     </>
   );

@@ -34,7 +34,7 @@ const FormBanner = (props: Props) => {
   // Prevent layout shift during loading
   if (!isLoaded) {
     return (
-      <div className="bg-white rounded-lg w-full max-w-[350px] sm:max-w-[450px] md:max-w-[550px] mx-auto p-6 sm:p-8 lg:p-10 text-black shadow-xl min-h-[400px] animate-pulse">
+      <div className="bg-white rounded-lg w-full max-w-[350px] sm:max-w-[450px] md:max-w-[550px] mx-auto p-6 sm:p-8 lg:p-10 text-black shadow-xl min-h-[400px]">
         <div className="space-y-6">
           <div className="h-12 bg-gray-200 rounded"></div>
           <div className="h-8 bg-gray-200 rounded"></div>
@@ -54,9 +54,9 @@ const FormBanner = (props: Props) => {
   }
 
   return (
-    <div className="bg-white rounded-lg w-full max-w-[350px] sm:max-w-[450px] md:max-w-[550px] mx-auto p-6 sm:p-8 lg:p-10 text-black shadow-xl">
+    <div className="bg-white rounded-lg w-full max-w-[320px] sm:max-w-[450px] md:max-w-[550px] mx-auto p-4 sm:p-8 lg:p-10 text-black shadow-xl">
       <Column gap={6}>
-        <p className="text-black font-medium text-3xl sm:text-4xl lg:text-5xl" aria-live="polite">
+        <p className="text-black font-medium text-2xl sm:text-4xl lg:text-5xl" aria-live="polite">
           ${value.toLocaleString()}
         </p>
         
@@ -91,12 +91,12 @@ const FormBanner = (props: Props) => {
         {/* Amount Buttons */}
         <div className="space-y-2">
           {/* First row: $200, $500, $1000, $2500 */}
-          <div className="grid grid-cols-2 sm:grid-cols-4 gap-2">
+          <div className="grid grid-cols-2 sm:grid-cols-4 gap-3">
             {priceList.slice(0, 4).map((item, key) => (
               <button
                 key={key}
                 onClick={() => handleButtonClick(key)}
-                className={`px-3 py-3 sm:px-4 sm:py-2 rounded-lg text-sm font-medium transition-all touch-manipulation min-h-[44px] ${
+                className={`px-2 py-3 sm:px-4 sm:py-2 rounded-lg text-xs sm:text-sm font-medium transition-all touch-manipulation min-h-[48px] ${
                   selectedIndex === key
                     ? 'bg-custom-blue text-white shadow-md'
                     : 'bg-gray-100 text-gray-700 hover:bg-gray-200 active:bg-gray-300'
@@ -112,7 +112,7 @@ const FormBanner = (props: Props) => {
           {/* Second row: $5000 full width */}
           <button
             onClick={() => handleButtonClick(4)}
-            className={`w-full px-3 py-3 sm:px-4 sm:py-2 rounded-lg text-sm font-medium transition-all touch-manipulation min-h-[44px] ${
+            className={`w-full px-3 py-3 sm:px-4 sm:py-2 rounded-lg text-xs sm:text-sm font-medium transition-all touch-manipulation min-h-[48px] ${
               selectedIndex === 4
                 ? 'bg-custom-blue text-white shadow-md'
                 : 'bg-gray-100 text-gray-700 hover:bg-gray-200 active:bg-gray-300'
